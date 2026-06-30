@@ -2,7 +2,7 @@
 
 This document describes the public REST endpoints added to `services/api` for AI Agent management.
 
-All endpoints follow the existing Paca API conventions: JWT authentication, project-scoped authorization, and standard error envelope `{"error": "..."}`.
+All endpoints follow the existing Litchi API conventions: JWT authentication, project-scoped authorization, and standard error envelope `{"error": "..."}`.
 
 ---
 

@@ -1,7 +1,7 @@
 [project]
 name = "paca-ai-agent"
 version = "0.1.0"
-description = "Paca AI Agent Service"
+description = "Litchi AI Agent Service"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi>=0.138.0",

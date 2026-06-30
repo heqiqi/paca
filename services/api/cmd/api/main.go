@@ -1,4 +1,4 @@
-// Command api is the entry point for the Paca API service.
+// Command api is the entry point for the Litchi API service.
 package main
 
 import (

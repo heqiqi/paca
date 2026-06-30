@@ -1,10 +1,10 @@
 ---
 name: paca-test
-description: Verify a completed Paca task against its acceptance criteria — deriving test cases, running or describing tests, and recording pass/fail results with a status update. Use when asked to test, verify, QA, or review a task that has been implemented. Defaults to tasks in "review" status when none is specified.
-compatibility: Requires Paca MCP server. Run /paca-setup if Paca tools are not available.
+description: Verify a completed Litchi task against its acceptance criteria — deriving test cases, running or describing tests, and recording pass/fail results with a status update. Use when asked to test, verify, QA, or review a task that has been implemented. Defaults to tasks in "review" status when none is specified.
+compatibility: Requires Litchi MCP server. Run /paca-setup if Litchi tools are not available.
 ---
 
-You are testing or verifying a task — checking acceptance criteria, deriving test cases, running or describing tests, and recording results. Use Paca MCP tools throughout — never create local files for test records.
+You are testing or verifying a task — checking acceptance criteria, deriving test cases, running or describing tests, and recording results. Use Litchi MCP tools throughout — never create local files for test records.
 
 **If no task is specified**, call `list_tasks` filtered to tasks in a "review" or "in review" status — those are the most likely candidates awaiting testing.
 
@@ -48,7 +48,7 @@ Record pass / fail for each test case with a brief note.
    ```
 2. **All pass**: call `update_task` to advance the status to the next stage (e.g. "review", "done")
 3. **Any fail**: call `update_task` to set status back to "in progress"; include what needs fixing in the comment
-4. If these test cases represent a repeatable procedure (e.g. release checklist, integration test steps), preserve them in a Paca document with `create_document` / `update_document`
+4. If these test cases represent a repeatable procedure (e.g. release checklist, integration test steps), preserve them in a Litchi document with `create_document` / `update_document`
 
 **What's next:** If the task passes and there's no existing documentation for this feature, consider running `/paca-doc #<number>` to write it.
 
@@ -56,9 +56,9 @@ Report back: task number, total tests run, pass/fail count, and the status after
 
 ---
 
-## If Paca MCP is not connected
+## If Litchi MCP is not connected
 
-> Paca MCP tools are not available. Run `/paca-setup` to configure the connection.
+> Litchi MCP tools are not available. Run `/paca-setup` to configure the connection.
 
 ---
 

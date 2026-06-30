@@ -89,7 +89,7 @@ function ChangePasswordPage() {
 									<div className="flex size-9 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/6 shadow-sm shadow-black/40">
 										<img
 											src="/paca-logo-dark.svg"
-											alt="Paca logo"
+											alt="Litchi logo"
 											width={127}
 											height={175}
 											className="h-auto w-5 brightness-0 invert"
@@ -174,7 +174,7 @@ function ChangePasswordPage() {
 			</main>
 
 			<footer className="py-4 text-center text-xs text-(--sea-ink-soft) opacity-60">
-				© {new Date().getFullYear()} Paca. All rights reserved.
+				© {new Date().getFullYear()} Litchi. All rights reserved.
 			</footer>
 		</div>
 	);

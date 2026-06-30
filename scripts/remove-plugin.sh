@@ -36,14 +36,14 @@ show_usage() {
     cat << EOF
 Usage: $(basename "$0") <plugin_id> [options]
 
-Remove a Paca plugin from the system.
+Remove a Litchi plugin from the system.
 
 Arguments:
   plugin_id          Plugin ID (e.g., com.paca.example)
 
 Options:
   -h, --help          Show this help message
-  --paca-dir DIR      Path to Paca project directory (default: auto-detected)
+  --paca-dir DIR      Path to Litchi project directory (default: auto-detected)
   --api-url URL       API base URL (default: http://localhost)
   --api-key KEY       API key for authentication (required)
   --unregister-only    Only remove plugin registration (keep local artifacts)
@@ -132,7 +132,7 @@ print_info "Paca directory: $PACA_DIR"
 print_info "API URL: $API_URL"
 echo ""
 
-# Check if Paca directory exists
+# Check if Litchi directory exists
 if [[ ! -d "$PACA_DIR" ]]; then
     print_error "Paca directory not found: $PACA_DIR"
     exit 1
@@ -189,7 +189,7 @@ if [[ "$REMOVE_ARTIFACTS_ONLY" = false ]]; then
         case "$HTTP_CODE" in
             404)
                 print_info "The API endpoint may not exist. Check that:"
-                print_info "  1. Paca API services are running: docker compose -f deploy/docker-compose.dev.yml ps"
+                print_info "  1. Litchi API services are running: docker compose -f deploy/docker-compose.dev.yml ps"
                 print_info "  2. API URL is correct: $API_ENDPOINT"
                 print_info "  3. Try accessing: curl $API_ENDPOINT/plugins"
                 ;;

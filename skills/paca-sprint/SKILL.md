@@ -1,10 +1,10 @@
 ---
 name: paca-sprint
-description: Plan a Paca sprint by selecting tasks from the backlog, detecting carryover from the previous sprint, inferring velocity from past sprints, and assigning tasks to the sprint. Use when starting a new sprint, filling an upcoming sprint, reviewing sprint capacity, or setting the sprint goal.
-compatibility: Requires Paca MCP server. Run /paca-setup if Paca tools are not available.
+description: Plan a Litchi sprint by selecting tasks from the backlog, detecting carryover from the previous sprint, inferring velocity from past sprints, and assigning tasks to the sprint. Use when starting a new sprint, filling an upcoming sprint, reviewing sprint capacity, or setting the sprint goal.
+compatibility: Requires Litchi MCP server. Run /paca-setup if Litchi tools are not available.
 ---
 
-You are planning a sprint in Paca. Use Paca MCP tools throughout — never create local files.
+You are planning a sprint in Litchi. Use Litchi MCP tools throughout — never create local files.
 
 **If no sprint is specified**, default to planning the next upcoming sprint for the most active project.
 
@@ -47,15 +47,15 @@ Once confirmed:
 2. Assign each task to the sprint with `update_task` (set `sprintId`)
 3. Set or update the sprint goal with `update_sprint`
 
-Optionally create or update a sprint planning note in Paca Docs (`create_document` / `update_document`) with the sprint goal, task list, capacity, and velocity reference.
+Optionally create or update a sprint planning note in Litchi Docs (`create_document` / `update_document`) with the sprint goal, task list, capacity, and velocity reference.
 
 Report back: sprint name, dates, task count, total estimate, capacity used, and sprint goal.
 
 ---
 
-## If Paca MCP is not connected
+## If Litchi MCP is not connected
 
-> Paca MCP tools are not available. Run `/paca-setup` to configure the connection.
+> Litchi MCP tools are not available. Run `/paca-setup` to configure the connection.
 
 ---
 

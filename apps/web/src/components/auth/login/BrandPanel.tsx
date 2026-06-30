@@ -35,7 +35,7 @@ export function BrandPanel() {
 					<div className="flex size-9 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/6 shadow-sm shadow-black/40">
 						<img
 							src="/paca-logo-dark.svg"
-							alt="Paca logo"
+							alt="Litchi logo"
 							width={127}
 							height={175}
 							className="h-auto w-5 brightness-0 invert"

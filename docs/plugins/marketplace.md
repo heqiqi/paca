@@ -1,10 +1,10 @@
 # Plugin Marketplace
 
-This document defines the plugin marketplace used by Paca.
+This document defines the plugin marketplace used by Litchi.
 
 ## Overview
 
-Paca uses a public GitHub repository as the marketplace source of truth:
+Litchi uses a public GitHub repository as the marketplace source of truth:
 
 - Repository: `Paca-AI/paca-plugins`
 - Catalog file: `catalog/plugins.json`
@@ -109,7 +109,7 @@ Plugin developers publish through PRs to `Paca-AI/paca-plugins`:
 2. Ensure four artifact tar.gz URLs are public and immutable.
 3. Add or update plugin entry in `catalog/plugins.json`.
 4. Open PR with version bump and release notes.
-5. After merge, the plugin appears automatically in Paca marketplace UI.
+5. After merge, the plugin appears automatically in Litchi marketplace UI.
 
 ## Operational Notes
 

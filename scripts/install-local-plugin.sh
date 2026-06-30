@@ -36,14 +36,14 @@ show_usage() {
     cat << EOF
 Usage: $(basename "$0") <plugin_dir> [options]
 
-Build and install a Paca plugin from a local directory.
+Build and install a Litchi plugin from a local directory.
 
 Arguments:
   plugin_dir          Path to the plugin directory (must contain plugin.json)
 
 Options:
   -h, --help          Show this help message
-  --paca-dir DIR      Path to Paca project directory (default: auto-detected)
+  --paca-dir DIR      Path to Litchi project directory (default: auto-detected)
   --api-url URL       API base URL (default: http://localhost)
   --api-key KEY       API key for authentication (required)
   --skip-build        Skip building (only install)
@@ -160,13 +160,13 @@ fi
 print_info "Plugin: $PLUGIN_ID"
 print_info "Version: $PLUGIN_VERSION"
 print_info "Plugin directory: $PLUGIN_DIR"
-print_info "Paca directory: $PACA_DIR"
+print_info "Litchi directory: $PACA_DIR"
 print_info "API URL: $API_URL"
 echo ""
 
-# Check if Paca directory exists
+# Check if Litchi directory exists
 if [[ ! -d "$PACA_DIR" ]]; then
-    print_error "Paca directory not found: $PACA_DIR"
+    print_error "Litchi directory not found: $PACA_DIR"
     exit 1
 fi
 
@@ -279,7 +279,7 @@ if [[ "$SKIP_INSTALL" = false ]]; then
         case "$HTTP_CODE" in
             404)
                 print_info "The API endpoint may not exist. Check that:"
-                print_info "  1. Paca API services are running: docker compose -f deploy/docker-compose.dev.yml ps"
+                print_info "  1. Litchi API services are running: docker compose -f deploy/docker-compose.dev.yml ps"
                 print_info "  2. API URL is correct: $API_ENDPOINT"
                 print_info "  3. Try accessing: curl $API_ENDPOINT/plugins"
                 ;;
@@ -385,4 +385,4 @@ echo ""
 print_success "Plugin $PLUGIN_ID v$PLUGIN_VERSION build and installation complete!"
 print_info "Backend artifacts: $BACKEND_DIR"
 print_info "Frontend artifacts: $FRONTEND_DIR"
-print_info "If the plugin is enabled, it will be available after restarting the Paca services"
+print_info "If the plugin is enabled, it will be available after restarting the Litchi services"

@@ -1,10 +1,10 @@
 ---
 name: paca
-description: Interact with Paca project management using MCP tools. Use when tracking tasks, writing docs, planning sprints, managing work items, creating bugs or features, viewing the board, or handling any project-management request involving Paca. Routes to specialized skills for complex workflows like epics, sprint planning, and task execution.
-compatibility: Requires Paca MCP server. Run /paca-setup if Paca tools are not available.
+description: Interact with Litchi project management using MCP tools. Use when tracking tasks, writing docs, planning sprints, managing work items, creating bugs or features, viewing the board, or handling any project-management request involving Litchi. Routes to specialized skills for complex workflows like epics, sprint planning, and task execution.
+compatibility: Requires Litchi MCP server. Run /paca-setup if Litchi tools are not available.
 ---
 
-You have Paca MCP tools. Handle the request by using those tools directly — never create local files for tasks, docs, or to-do lists.
+You have Litchi MCP tools. Handle the request by using those tools directly — never create local files for tasks, docs, or to-do lists.
 
 ---
 
@@ -36,7 +36,7 @@ Scan the user's message for any of these patterns, wherever they appear:
 |---|---|---|
 | `#<number>` or number in task context | `#42`, `close #7`, `task 42 is done` | `get_task_by_number(projectId, 42)` |
 | `PREFIX-<number>` | `ABC-42`, `PAC-7` | `list_projects` → match `task_id_prefix` → `get_task_by_number` |
-| Paca URL | `http://…/projects/{id}/tasks/{id}` | parse both IDs → `get_task(projectId, taskId)` |
+| Litchi URL | `http://…/projects/{id}/tasks/{id}` | parse both IDs → `get_task(projectId, taskId)` |
 | UUID | `550e8400-e29b-41d4-a716-446655440000` | `get_task(projectId, uuid)` |
 
 If a reference is found, fetch that task first, then apply the action the user is asking for.
@@ -79,9 +79,9 @@ Execute the tool call(s), then report back: task/doc number, title, and any rele
 
 ---
 
-## If Paca MCP is not connected
+## If Litchi MCP is not connected
 
-> Paca MCP tools are not available. Run `/paca-setup` to configure the connection.
+> Litchi MCP tools are not available. Run `/paca-setup` to configure the connection.
 
 Do not create local files as a fallback.
 

@@ -1,8 +1,8 @@
 # Changelog
 
-All notable changes to the Paca MCP server (`@paca-ai/paca-mcp`) will be documented in this file.
+All notable changes to the Litchi MCP server (`@paca-ai/paca-mcp`) will be documented in this file.
 
-The package version follows the main Paca repository release and is published on every new release.
+The package version follows the main Litchi repository release and is published on every new release.
 
 ## [Unreleased]
 

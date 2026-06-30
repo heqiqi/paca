@@ -11,7 +11,7 @@ from app.core.database import Base
 
 
 class User(Base):
-    """User represents a Paca user account."""
+    """User represents a Litchi user account."""
 
     __tablename__ = "users"
 

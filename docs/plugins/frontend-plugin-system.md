@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Paca frontend plugin system is built on **Vite Module Federation** (via `@module-federation/vite`). The core `apps/web` application acts as the **host**. Each plugin ships as a **remote entry** — a separately built JavaScript bundle that exposes React components through a well-known contract defined by `@paca-ai/plugin-sdk-react`.
+The Litchi frontend plugin system is built on **Vite Module Federation** (via `@module-federation/vite`). The core `apps/web` application acts as the **host**. Each plugin ships as a **remote entry** — a separately built JavaScript bundle that exposes React components through a well-known contract defined by `@paca-ai/plugin-sdk-react`.
 
 Plugins are loaded lazily when the user first navigates to a surface that has an active plugin registered for it. No plugin code is fetched until it is needed.
 
@@ -77,7 +77,7 @@ interface ViewContext {
 }
 ```
 
-The `PluginSDK` object exposes the plugin's backend API client (scoped to `/api/v1/plugins/{pluginId}/`) and a set of UI utility functions (toast, confirmation dialog, navigation). Plugins **cannot** import Paca's internal React Query cache or TanStack Router instances.
+The `PluginSDK` object exposes the plugin's backend API client (scoped to `/api/v1/plugins/{pluginId}/`) and a set of UI utility functions (toast, confirmation dialog, navigation). Plugins **cannot** import Litchi's internal React Query cache or TanStack Router instances.
 
 ## Host-Side Implementation
 

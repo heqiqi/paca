@@ -409,7 +409,7 @@ func seedAgentBotUser(ctx context.Context, repo userdom.Repository, globalRoleRe
 		ID:           agentBotUserID,
 		Username:     "_paca_agent_bot",
 		PasswordHash: "!", // intentionally invalid — bot cannot log in with a password
-		FullName:     "Paca Agent Bot",
+		FullName:     "Litchi Agent Bot",
 		RoleID:       superAdminRole.ID,
 		Role:         superAdminRole.Name,
 		CreatedAt:    now,

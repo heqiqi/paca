@@ -1,6 +1,6 @@
 # Code of Conduct
 
-Paca is an open-source project and expects respectful, constructive collaboration.
+Litchi is an open-source project and expects respectful, constructive collaboration.
 
 ## Our Standard
 

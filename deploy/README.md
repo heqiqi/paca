@@ -23,7 +23,7 @@ Service container definitions live with each service:
 
 ### Recommended: install script
 
-The easiest way to run Paca without cloning the repository is via the install script
+The easiest way to run Litchi without cloning the repository is via the install script
 published with each release. It downloads the compose file and Caddyfile, walks you
 through configuration interactively (database, storage, networking/HTTPS, AI agent),
 generates a `.env` with strong random secrets, and starts the stack.

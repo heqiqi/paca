@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Paca – upgrade script
+# Litchi – upgrade script
 #
-# Updates an existing Paca installation (created by install.sh, or set up
+# Updates an existing Litchi installation (created by install.sh, or set up
 # manually per deploy/README.md) to a new release: refreshes
 # docker-compose.yml and the Caddyfile, re-pins image versions in .env when a
 # specific version is requested, backfills any .env variables introduced
@@ -146,7 +146,7 @@ IMAGE_TAG="${PACA_VERSION#v}"
 
 echo ""
 bold "╔══════════════════════════════════════════════════════════╗"
-bold "║         Paca  –  upgrade an existing installation        ║"
+bold "║         Litchi – upgrade an existing installation        ║"
 bold "╚══════════════════════════════════════════════════════════╝"
 echo ""
 
@@ -250,7 +250,7 @@ fi
 # Backfill variables introduced by the nginx → Caddy gateway migration.
 # Installations from before that release have neither in .env. SITE_ADDRESS
 # defaults to the hostname already in PUBLIC_URL so Caddy requests a
-# certificate for the address Paca is actually reachable at, rather than
+# certificate for the address Litchi is actually reachable at, rather than
 # silently leaving the upgraded gateway on plain HTTP.
 GATEWAY_VARS_ADDED=0
 if ! has_env_var .env SITE_ADDRESS; then
@@ -332,7 +332,7 @@ $COMPOSE_CMD --env-file .env up -d --remove-orphans ${SCALE_OPTS[@]+"${SCALE_OPT
 
 echo ""
 bold "╔══════════════════════════════════════════════════════════╗"
-bold "║              Paca has been upgraded!                     ║"
+bold "║              Litchi has been upgraded!                     ║"
 bold "╚══════════════════════════════════════════════════════════╝"
 echo ""
 info "Version: ${IMAGE_TAG}"

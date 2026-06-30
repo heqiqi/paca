@@ -1,10 +1,10 @@
 ---
 name: paca-breakdown
-description: Break a large Paca task or epic into smaller, actionable sub-tasks with dependency ordering. Use when decomposing work that is too large to estimate or execute in a single session, when creating an implementation plan, or when a task needs to be split into vertical slices before sprint planning.
-compatibility: Requires Paca MCP server. Run /paca-setup if Paca tools are not available.
+description: Break a large Litchi task or epic into smaller, actionable sub-tasks with dependency ordering. Use when decomposing work that is too large to estimate or execute in a single session, when creating an implementation plan, or when a task needs to be split into vertical slices before sprint planning.
+compatibility: Requires Litchi MCP server. Run /paca-setup if Litchi tools are not available.
 ---
 
-You are breaking a task or epic into smaller, actionable sub-tasks in Paca. Use Paca MCP tools throughout — never create local files.
+You are breaking a task or epic into smaller, actionable sub-tasks in Litchi. Use Litchi MCP tools throughout — never create local files.
 
 **If no task is specified**, call `list_tasks` filtered to the current sprint or backlog and show the user the largest or most complex unbroken tasks as candidates.
 
@@ -49,9 +49,9 @@ Report back: parent task number, list of created sub-task numbers, titles, and a
 
 ---
 
-## If Paca MCP is not connected
+## If Litchi MCP is not connected
 
-> Paca MCP tools are not available. Run `/paca-setup` to configure the connection.
+> Litchi MCP tools are not available. Run `/paca-setup` to configure the connection.
 
 ---
 

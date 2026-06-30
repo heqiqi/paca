@@ -1,6 +1,6 @@
 # Plugin System Overview
 
-Paca's plugin system lets developers extend the product without forking the core. Plugins can add UI surfaces (views, sidebar sections, task detail panels, project settings tabs), register backend HTTP routes, and run server-side logic with scoped access to the database and event bus.
+Litchi's plugin system lets developers extend the product without forking the core. Plugins can add UI surfaces (views, sidebar sections, task detail panels, project settings tabs), register backend HTTP routes, and run server-side logic with scoped access to the database and event bus.
 
 ## Goals
 
@@ -16,7 +16,7 @@ Paca's plugin system lets developers extend the product without forking the core
 
 ## Marketplace
 
-Paca includes an admin marketplace UI backed by a public GitHub catalog.
+Litchi includes an admin marketplace UI backed by a public GitHub catalog.
 
 - Catalog source: `Paca-AI/paca-plugins` (`catalog/plugins.json`)
 - Publish model: plugin developers contribute via pull requests
@@ -29,10 +29,10 @@ See [marketplace.md](marketplace.md) for schema and operational details.
 | Concept | Description |
 |---|---|
 | **Plugin** | A versioned bundle of frontend and/or backend code that declares its extension points in a manifest. |
-| **Extension Point** | A named slot in the Paca UI or backend where a plugin can inject behaviour. |
+| **Extension Point** | A named slot in the Litchi UI or backend where a plugin can inject behaviour. |
 | **Plugin Manifest** | A `plugin.json` file that declares the plugin's ID, version, permissions, and extension point registrations. |
 | **Plugin Registry** | The per-installation record of which plugins are installed, enabled, and at what version. |
-| **Plugin SDK** | The TypeScript (`@paca-ai/plugin-sdk-react`), Go (`github.com/Paca-AI/plugin-sdk-go`), and MCP (`@paca-ai/plugin-sdk-mcp`) packages that provide typed APIs against the Paca host. |
+| **Plugin SDK** | The TypeScript (`@paca-ai/plugin-sdk-react`), Go (`github.com/Paca-AI/plugin-sdk-go`), and MCP (`@paca-ai/plugin-sdk-mcp`) packages that provide typed APIs against the Litchi host. |
 
 ## Architecture at a Glance
 
@@ -83,7 +83,7 @@ See [marketplace.md](marketplace.md) for schema and operational details.
 | `view` | Main content area | Registers a full view (e.g., Gantt, Roadmap, Calendar) as a selectable board view. |
 | `api.route` | Backend | Registers one or more HTTP routes under `/api/v1/plugins/{pluginId}/`. |
 | `event.handler` | Backend | Subscribes to core domain events (task created, sprint closed, etc.). |
-| `mcp.tools` | MCP server | Exposes AI-callable MCP tools through the Paca MCP server. |
+| `mcp.tools` | MCP server | Exposes AI-callable MCP tools through the Litchi MCP server. |
 
 ## Plugin Lifecycle
 

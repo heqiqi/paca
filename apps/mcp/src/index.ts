@@ -8,7 +8,7 @@ import type { PacaConfig } from "./types/index.js";
 const require = createRequire(import.meta.url);
 
 /**
- * Main entry point for the Paca MCP server.
+ * Main entry point for the Litchi MCP server.
  * Initializes the API clients and starts the MCP server.
  */
 async function main() {
@@ -29,7 +29,7 @@ async function main() {
 	// Validate required configuration
 	if (!apiKey) {
 		console.error(
-			"PACA_API_KEY environment variable is required. Please set it to your Paca API key.",
+			"PACA_API_KEY environment variable is required. Please set it to your Litchi API key.",
 		);
 		console.error("\nExample:");
 		console.error("  export PACA_API_KEY='your-api-key-here'");

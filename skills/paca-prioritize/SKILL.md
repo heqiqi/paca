@@ -1,10 +1,10 @@
 ---
 name: paca-prioritize
-description: Set or adjust priorities across the Paca backlog, aligned to roadmap goals and business value. Use when the backlog needs sorting, before sprint planning, when tasks need explicit Critical/High/Medium/Low priority labels, or when asked to rank work by importance or urgency.
-compatibility: Requires Paca MCP server. Run /paca-setup if Paca tools are not available.
+description: Set or adjust priorities across the Litchi backlog, aligned to roadmap goals and business value. Use when the backlog needs sorting, before sprint planning, when tasks need explicit Critical/High/Medium/Low priority labels, or when asked to rank work by importance or urgency.
+compatibility: Requires Litchi MCP server. Run /paca-setup if Litchi tools are not available.
 ---
 
-You are setting priorities for tasks in Paca. Use Paca MCP tools throughout — never create local files.
+You are setting priorities for tasks in Litchi. Use Litchi MCP tools throughout — never create local files.
 
 **If no task is specified**, operate on the full backlog of the most active project.
 
@@ -47,9 +47,9 @@ Report back: full updated priority list as a table (task number · title · prio
 
 ---
 
-## If Paca MCP is not connected
+## If Litchi MCP is not connected
 
-> Paca MCP tools are not available. Run `/paca-setup` to configure the connection.
+> Litchi MCP tools are not available. Run `/paca-setup` to configure the connection.
 
 ---
 

@@ -1,10 +1,10 @@
 ---
 name: paca-do
-description: Execute a Paca task end-to-end — reading context and acceptance criteria, doing the work (code, writing, research, review), updating task status, and commenting results. Use when asked to start, implement, complete, or work on a specific Paca task. Reads project docs first to understand the codebase and tech stack before acting.
-compatibility: Requires Paca MCP server. Run /paca-setup if Paca tools are not available.
+description: Execute a Litchi task end-to-end — reading context and acceptance criteria, doing the work (code, writing, research, review), updating task status, and commenting results. Use when asked to start, implement, complete, or work on a specific Litchi task. Reads project docs first to understand the codebase and tech stack before acting.
+compatibility: Requires Litchi MCP server. Run /paca-setup if Litchi tools are not available.
 ---
 
-You are executing a task from Paca — reading it, understanding context, doing the work, and updating the record. Use Paca MCP tools throughout — never create local files for task records or documentation.
+You are executing a task from Litchi — reading it, understanding context, doing the work, and updating the record. Use Litchi MCP tools throughout — never create local files for task records or documentation.
 
 **If no task is specified**, call `list_tasks` filtered to in-progress tasks in the current sprint. Show them and ask which to work on.
 
@@ -29,16 +29,16 @@ You are executing a task from Paca — reading it, understanding context, doing 
 Execute based on the task type:
 
 - **Code task**: find the relevant source files, read existing tests to understand the expected behavior, implement the change, run the test suite. If you need to understand what "in scope" looks like, the BDD scenarios you read in Step 1 are authoritative.
-- **Writing task**: draft the content in the response, or create/update a Paca document via `create_document` / `update_document`. Never write to a local file.
-- **Research / investigation task**: investigate, write findings as a comment via `add_task_comment` or as a Paca doc, then update the task description with the conclusions.
+- **Writing task**: draft the content in the response, or create/update a Litchi document via `create_document` / `update_document`. Never write to a local file.
+- **Research / investigation task**: investigate, write findings as a comment via `add_task_comment` or as a Litchi doc, then update the task description with the conclusions.
 - **Review task**: analyse the artifact (PR, document, design), post a structured review as `add_task_comment`.
 
-If you discover a blocker or a genuine sub-task that wasn't anticipated, create it in Paca with `create_task` (reference the parent: `Blocked by #<parent>`). Don't silently skip or work around it.
+If you discover a blocker or a genuine sub-task that wasn't anticipated, create it in Litchi with `create_task` (reference the parent: `Blocked by #<parent>`). Don't silently skip or work around it.
 
 ## Step 4 — Update and close
 
 1. Call `add_task_comment` with a completion summary: what was done, what changed, any known caveats or follow-up needed.
-2. If any project documentation was affected (README, architecture doc, API reference), update the relevant Paca document with `update_document`. Never write new docs as local files.
+2. If any project documentation was affected (README, architecture doc, API reference), update the relevant Litchi document with `update_document`. Never write new docs as local files.
 3. Call `update_task` to set the status to done (or the next stage — e.g. "review" — if your workflow has one).
 
 **What's next:** Consider running `/paca-test #<number>` to verify the implementation against acceptance criteria.
@@ -47,9 +47,9 @@ Report back: task number, title, summary of what was done, and any new tasks or 
 
 ---
 
-## If Paca MCP is not connected
+## If Litchi MCP is not connected
 
-> Paca MCP tools are not available. Run `/paca-setup` to configure the connection.
+> Litchi MCP tools are not available. Run `/paca-setup` to configure the connection.
 
 ---
 

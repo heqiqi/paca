@@ -19,7 +19,7 @@ import type {
 } from "../types/index.js";
 
 /**
- * Extended API client methods for additional Paca endpoints.
+ * Extended API client methods for additional Litchi endpoints.
  * This extends the base PacaAPIClient with additional functionality.
  */
 export class PacaAPIExtendedClient {
@@ -30,7 +30,7 @@ export class PacaAPIExtendedClient {
 	}
 
 	/**
-	 * Makes an HTTP request to the Paca API.
+	 * Makes an HTTP request to the Litchi API.
 	 * Handles SuccessEnvelope wrapper by extracting data.data.
 	 */
 	private async request(

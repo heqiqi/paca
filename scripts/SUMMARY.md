@@ -1,6 +1,6 @@
 # Plugin Management Scripts - Summary
 
-I've created a complete solution for building, installing, and removing Paca plugins from local directories. Here's what was added:
+I've created a complete solution for building, installing, and removing Litchi plugins from local directories. Here's what was added:
 
 ## Created Files
 
@@ -49,7 +49,7 @@ The script automates the complete plugin installation process:
 5. ✅ **Populates frontend store** - Copies assets to `plugins/local/frontend/<plugin-id>/`
 6. ✅ **Authenticates with API** - Validates API key
 7. ✅ **Checks existing plugins** - Determines if plugin is already installed
-8. ✅ **Installs or updates plugin** - Calls Paca API to register the plugin
+8. ✅ **Installs or updates plugin** - Calls Litchi API to register the plugin
 
 ## Features
 
@@ -114,8 +114,8 @@ source ~/.bashrc
 - Bun package manager (for building frontend)
 - jq (for JSON parsing)
 - curl (for API calls)
-- Paca API key (required - see [API_KEY_GUIDE.md](./API_KEY_GUIDE.md))
-- Paca services running and accessible
+- Litchi API key (required - see [API_KEY_GUIDE.md](./API_KEY_GUIDE.md))
+- Litchi services running and accessible
 
 ## Adding to Your Shell
 
@@ -137,10 +137,10 @@ See `scripts/README.md` for detailed troubleshooting guide.
 
 Common issues:
 - **Script not executable**: `chmod +x scripts/install-local-plugin.sh`
-- **API connection failed**: Ensure Paca services are running
+- **API connection failed**: Ensure Litchi services are running
 - **Build failed**: Install dependencies manually in backend/frontend directories
 - **Authentication failed**: Verify API key is valid and not revoked
-- **How to get API key**: Log in to Paca → Settings → API Keys → Create new key (see [API_KEY_GUIDE.md](./API_KEY_GUIDE.md))
+- **How to get API key**: Log in to Litchi → Settings → API Keys → Create new key (see [API_KEY_GUIDE.md](./API_KEY_GUIDE.md))
 
 ## Documentation
 

@@ -1,6 +1,6 @@
 # Product Overview
 
-Paca is a lightweight open-source collaborative task management platform for humans and AI agents working on the same board.
+Litchi is a lightweight open-source collaborative task management platform for humans and AI agents working on the same board.
 
 ## Core Model
 

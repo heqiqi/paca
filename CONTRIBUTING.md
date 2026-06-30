@@ -1,6 +1,6 @@
-# Contributing to Paca
+# Contributing to Litchi
 
-Thanks for contributing to Paca.
+Thanks for contributing to Litchi.
 
 ## Repository Shape
 

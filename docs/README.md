@@ -1,6 +1,6 @@
 # Documentation
 
-This directory is the main documentation home for Paca.
+This directory is the main documentation home for Litchi.
 
 ## Sections
 
@@ -10,7 +10,7 @@ This directory is the main documentation home for Paca.
 - [architecture/database-schema.md](architecture/database-schema.md): database schema (DBML) and interactive diagram.
 - [architecture/interaction-views.md](architecture/interaction-views.md): how sprint, backlog, and timeline views share one model and one task-list API.
 - [guides/getting-started.md](guides/getting-started.md): what a new contributor should read first.
-- [guides/mcp-server-setup.md](guides/mcp-server-setup.md): setup guide for integrating AI agents (Claude, custom agents) with Paca via MCP server.
+- [guides/mcp-server-setup.md](guides/mcp-server-setup.md): setup guide for integrating AI agents (Claude, custom agents) with Litchi via MCP server.
 - [guides/local-development.md](guides/local-development.md): local development intent and future setup direction.
 - [guides/design-system.md](guides/design-system.md): visual language, component patterns, and interaction conventions for the web UI.
 - [api/README.md](api/README.md): API and event contract documentation index.
@@ -22,7 +22,7 @@ This directory is the main documentation home for Paca.
 - [plugins/backend-plugin-system.md](plugins/backend-plugin-system.md): WASM runtime, host function bridge, and route registration.
 - [plugins/marketplace.md](plugins/marketplace.md): public GitHub marketplace catalog schema and install flow.
 - [plugins/sdk-reference.md](plugins/sdk-reference.md): full API reference for `@paca-ai/plugin-sdk-react` (TypeScript) and `github.com/Paca-AI/plugin-sdk` (Go).
-- [plugins/developer-guide.md](plugins/developer-guide.md): step-by-step guide to building and publishing a Paca plugin.
+- [plugins/developer-guide.md](plugins/developer-guide.md): step-by-step guide to building and publishing a Litchi plugin.
 
 ## Principles
 

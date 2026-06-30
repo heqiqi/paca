@@ -611,7 +611,7 @@ function HomePage() {
 									</Badge>
 								</div>
 								<p className="text-xs text-muted-foreground">
-									Complete these steps to unlock the full power of Paca.
+									Complete these steps to unlock the full power of Litchi.
 								</p>
 							</CardHeader>
 							<CardContent className="pt-3">
@@ -751,7 +751,7 @@ function HomePage() {
 									<div className="mb-2 flex items-center gap-2">
 										<Zap className="size-3.5 text-primary" />
 										<p className="font-[Syne] text-xs font-bold uppercase tracking-widest text-primary">
-											How Paca works
+											How Litchi works
 										</p>
 									</div>
 									<p className="text-sm leading-relaxed text-foreground/80">

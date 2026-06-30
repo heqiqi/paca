@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="docs/assets/paca-logo.svg" alt="Paca logo" width="256" />
+  <img src="docs/assets/paca-logo.svg" alt="Litchi logo" width="256" />
 </p>
 
-<h1 align="center">Paca</h1>
+<h1 align="center">Litchi</h1>
 
 <p align="center"><strong>AI-native. Free. Lightweight. Open-source.<br/>The fully customizable alternative to Jira, Trello, ClickUp, and Monday.</strong></p>
 
@@ -15,7 +15,7 @@
 <p align="center">
   <a href="#getting-started">Getting Started</a>
   ·
-  <a href="#mcp-server--connect-any-ai-agent-to-paca">MCP Server</a>
+  <a href="#mcp-server--connect-any-ai-agent-to-litchi">MCP Server</a>
   ·
   <a href="#claude-code--paca-skill">Claude Code Skill</a>
   ·
@@ -28,19 +28,19 @@
 
 ---
 
-## What is Paca?
+## What is Litchi?
 
-Paca is a **self-hosted project management platform** where AI agents and humans collaborate as equal teammates inside a Scrum team — not as chatbots bolted on the side.
+Litchi is a **self-hosted project management platform** where AI agents and humans collaborate as equal teammates inside a Scrum team — not as chatbots bolted on the side.
 
-Jira gives you a backlog. ClickUp gives you automations. Monday gives you dashboards. **Paca gives your AI agents a seat at the table.** They join sprint planning, pick up tasks from the board, write BDD specs, and adapt alongside humans in real time.
+Jira gives you a backlog. ClickUp gives you automations. Monday gives you dashboards. **Litchi gives your AI agents a seat at the table.** They join sprint planning, pick up tasks from the board, write BDD specs, and adapt alongside humans in real time.
 
-Everything about Paca — its workflow, its data model, its UI — is **configurable and extendable via plugins**.
+Everything about Litchi — its workflow, its data model, its UI — is **configurable and extendable via plugins**.
 
 ---
 
-## Why Paca?
+## Why Litchi?
 
-| | Jira / Trello / ClickUp / Monday | **Paca** |
+| | Jira / Trello / ClickUp / Monday | **Litchi** |
 |:--|:--|:--|
 | **AI integration** | Chatbot add-ons, peripheral automation | AI agents as first-class Scrum teammates |
 | **Collaboration model** | Human-only by default | Human + AI, side by side on the same board |
@@ -54,9 +54,9 @@ Everything about Paca — its workflow, its data model, its UI — is **configur
 
 ## Core Idea: Humans and AI Agents, One Scrum Team
 
-The central insight behind Paca is that **AI agents should participate in the Scrum process**, not just generate output in isolation.
+The central insight behind Litchi is that **AI agents should participate in the Scrum process**, not just generate output in isolation.
 
-In Paca, AI agents:
+In Litchi, AI agents:
 
 - Are **assigned to sprints** and appear on the Scrumban board alongside human teammates
 - **Pick up tasks** from the backlog and update their status in real time
@@ -67,18 +67,18 @@ In Paca, AI agents:
 This is not automation. It is **genuine collaboration** — rooted in the Cynefin / Stacey framework's recognition that complex domains require teams, not pipelines.
 
 <p align="center">
-  <img src="docs/assets/demo-assign-task.gif" width="720" alt="Paca Demo — AI Agents as Real Scrum Teammates on the Scrumban Board" />
+  <img src="docs/assets/demo-assign-task.gif" width="720" alt="Litchi Demo — AI Agents as Real Scrum Teammates on the Scrumban Board" />
 </p>
 
 ---
 
 ## Fully Customizable — Configuration and Plugins
 
-Paca ships as a small, focused core. Everything else is optional.
+Litchi ships as a small, focused core. Everything else is optional.
 
-**Configuration-driven:** workflows, statuses, field definitions, board layouts, sprint rules, and agent behavior are all driven by project-level configuration files. No code needed to adapt Paca to your team's process.
+**Configuration-driven:** workflows, statuses, field definitions, board layouts, sprint rules, and agent behavior are all driven by project-level configuration files. No code needed to adapt Litchi to your team's process.
 
-**Plugin system:** extend or replace any part of Paca via plugins. Plugins are compiled to **WebAssembly (WASM)** for the backend (write in Go, Rust, AssemblyScript — anything with a WASM target) and standard module bundles for the frontend. Plugins run in a sandboxed environment with a capability-based permission model; they declare exactly what host functions they need, and nothing more.
+**Plugin system:** extend or replace any part of Litchi via plugins. Plugins are compiled to **WebAssembly (WASM)** for the backend (write in Go, Rust, AssemblyScript — anything with a WASM target) and standard module bundles for the frontend. Plugins run in a sandboxed environment with a capability-based permission model; they declare exactly what host functions they need, and nothing more.
 
 ```
 plugins/
@@ -86,10 +86,10 @@ plugins/
 └── frontend/       # UI modules — add custom pages, board views, widgets
 ```
 
-Browse and install community plugins directly from the **Plugin Marketplace** inside the Paca UI — no command line required. Go to **Settings → Plugins → Marketplace**, find a plugin, and click **Install**.
+Browse and install community plugins directly from the **Plugin Marketplace** inside the Litchi UI — no command line required. Go to **Settings → Plugins → Marketplace**, find a plugin, and click **Install**.
 
 <p align="center">
-  <img src="docs/assets/demo-plugin-marketplace.gif" width="720" alt="Paca Plugin Marketplace — Install Community Plugins in One Click" />
+  <img src="docs/assets/demo-plugin-marketplace.gif" width="720" alt="Litchi Plugin Marketplace — Install Community Plugins in One Click" />
 </p>
 
 For local development or custom plugins, you can also install from the filesystem:
@@ -102,7 +102,7 @@ For local development or custom plugins, you can also install from the filesyste
 
 ## The P-A-C-A Cycle
 
-Paca structures team collaboration around four phases that mirror both Scrum and the scientific method:
+Litchi structures team collaboration around four phases that mirror both Scrum and the scientific method:
 
 ```
 Plan  →  Act  →  Check  →  Adapt
@@ -121,16 +121,16 @@ Plan  →  Act  →  Check  →  Adapt
 
 ## What's New in v0.4.0
 
-- **In-app AI chat** — chat with AI agents at the project level to plan work, create or update epics, stories, tasks, and documentation — all in plain English without leaving Paca
+- **In-app AI chat** — chat with AI agents at the project level to plan work, create or update epics, stories, tasks, and documentation — all in plain English without leaving Litchi
 
 <p align="center">
-  <img src="docs/assets/demo-ai-chat.gif" width="720" alt="Paca v0.4.0 — In-app AI Chat for Project Planning and Task Management" />
+  <img src="docs/assets/demo-ai-chat.gif" width="720" alt="Litchi v0.4.0 — In-app AI Chat for Project Planning and Task Management" />
 </p>
 
 - **Activity diff & revert** — every field change in the activity pane now shows a before/after diff; one click reverts a change to its previous value
 
 <p align="center">
-  <img src="docs/assets/demo-activity-diff-revert.gif" width="720" alt="Paca v0.4.0 — Activity Diff and Revert" />
+  <img src="docs/assets/demo-activity-diff-revert.gif" width="720" alt="Litchi v0.4.0 — Activity Diff and Revert" />
 </p>
 
 ---
@@ -142,11 +142,11 @@ Plan  →  Act  →  Check  →  Adapt
 - **Activity diff & revert** — see a visual diff for every field change in the activity pane and revert any change with one click
 - **BDD Collaboration** — Gherkin scenario editor co-authored by POs, BAs, and AI agents
 - **System Design Documents (SDD)** — living architecture docs that keep AI agents contextually grounded
-- **MCP Server** — connect Claude, custom agents, or any MCP-compatible tool directly into Paca's data layer
+- **MCP Server** — connect Claude, custom agents, or any MCP-compatible tool directly into Litchi's data layer
 - **Claude Code skill** — `/paca` slash command for Claude Code; manage tasks, docs, and sprints in plain English without leaving your editor
 - **Real-time updates** — Socket.IO delivery; everyone sees changes the moment they happen
 - **OpenHands-powered agents** — AI agents run on the [OpenHands](https://github.com/All-Hands-AI/OpenHands) SDK; each agent executes inside its own isolated sandbox container so your host environment is never touched
-- **WASM plugin sandbox** — extend Paca safely; plugins cannot escape their declared permissions
+- **WASM plugin sandbox** — extend Litchi safely; plugins cannot escape their declared permissions
 - **Self-hosted** — runs on a single Docker Compose command; your data never leaves your infrastructure
 - **Lightweight by default** — minimal core, no feature bloat; add only what your team actually needs
 
@@ -165,7 +165,7 @@ curl -fsSL https://github.com/Paca-AI/paca/releases/latest/download/install.sh |
 The script walks you through configuration interactively and starts the full stack. Open `http://your-server-ip` when it finishes.
 
 <p align="center">
-  <img src="docs/assets/demo-install.gif" width="720" alt="How to Install Paca on Any Linux Server with One Command" />
+  <img src="docs/assets/demo-install.gif" width="720" alt="How to Install Litchi on Any Linux Server with One Command" />
 </p>
 
 ---
@@ -280,9 +280,9 @@ See [docs/guides/local-development.md](docs/guides/local-development.md) for run
 
 ---
 
-## MCP Server — Connect Any AI Agent to Paca
+## MCP Server — Connect Any AI Agent to Litchi
 
-Paca ships an [MCP (Model Context Protocol)](https://modelcontextprotocol.io) server that gives any compatible AI agent direct, structured access to your workspace — projects, tasks, sprints, documents, members, and more. No scraping, no custom APIs to wire up.
+Litchi ships an [MCP (Model Context Protocol)](https://modelcontextprotocol.io) server that gives any compatible AI agent direct, structured access to your workspace — projects, tasks, sprints, documents, members, and more. No scraping, no custom APIs to wire up.
 
 The server is published as **`@paca-ai/paca-mcp`** on npm. You run it with `npx`; your MCP client handles the rest.
 
@@ -309,7 +309,7 @@ The server is published as **`@paca-ai/paca-mcp`** on npm. You run it with `npx`
 }
 ```
 
-3. Restart Claude Desktop. Claude now has access to all Paca tools and can answer requests like:
+3. Restart Claude Desktop. Claude now has access to all Litchi tools and can answer requests like:
    - *"List all active sprints in project X"*
    - *"Create a task for implementing OAuth and assign it to sprint 3"*
    - *"Add a comment to task #42 with my progress update"*
@@ -325,7 +325,7 @@ Any client that speaks MCP works. Typical configuration:
   "args": ["-y", "@paca-ai/paca-mcp"],
   "env": {
     "PACA_API_KEY": "your-api-key-here",
-    "PACA_API_URL": "http://your-paca-instance:8080"
+    "PACA_API_URL": "http://your-litchi-instance:8080"
   }
 }
 ```
@@ -334,8 +334,8 @@ Any client that speaks MCP works. Typical configuration:
 
 | Variable | Required | Default | Description |
 |:--|:--|:--|:--|
-| `PACA_API_KEY` | Yes | — | API key from your Paca instance (Settings → API Keys) |
-| `PACA_API_URL` | No | `http://localhost:8080` | URL of your Paca API |
+| `PACA_API_KEY` | Yes | — | API key from your Litchi instance (Settings → API Keys) |
+| `PACA_API_URL` | No | `http://localhost:8080` | URL of your Litchi API |
 
 ### Available Tools
 
@@ -360,7 +360,7 @@ For a complete reference and advanced configuration (agent-mode, plugin tools, p
 
 ## Claude Code — `/paca` skills
 
-If you use [Claude Code](https://claude.ai/code), install the Paca skill set and manage your entire Paca workspace through natural-language slash commands — without leaving your editor and without creating local files. Every command reads your Paca documentation first to understand the project before acting.
+If you use [Claude Code](https://claude.ai/code), install the Litchi skill set and manage your entire Litchi workspace through natural-language slash commands — without leaving your editor and without creating local files. Every command reads your Litchi documentation first to understand the project before acting.
 
 Skills are defined in the [`skills/`](skills/) directory using the [Agent Skills](https://agentskills.io/specification) format — one subdirectory per skill, each with a `SKILL.md` containing YAML frontmatter and instructions. The install script strips the frontmatter and writes the body to `~/.claude/commands/` for use as Claude Code slash commands.
 
@@ -372,12 +372,12 @@ Run this once in your terminal to install all skills globally:
 curl -fsSL https://raw.githubusercontent.com/Paca-AI/paca/master/scripts/install-claude-skill.sh | bash
 ```
 
-Then connect the Paca MCP server to Claude Code:
+Then connect the Litchi MCP server to Claude Code:
 
 ```bash
 claude mcp add paca \
   --env PACA_API_KEY=<your-api-key> \
-  --env PACA_API_URL=<your-paca-url> \
+  --env PACA_API_URL=<your-litchi-url> \
   -- npx -y @paca-ai/paca-mcp
 ```
 
@@ -389,14 +389,14 @@ Run `/paca-setup` inside a Claude Code session for a guided interactive walkthro
 |:--|:--|
 | `/paca <request>` | General task, doc, and sprint operations in plain English |
 | `/paca-epic <requirements>` | Turn requirements into an epic with child stories and a spec doc |
-| `/paca-clarify <task-or-doc>` | Identify ambiguities, ask questions, and update the spec in Paca |
+| `/paca-clarify <task-or-doc>` | Identify ambiguities, ask questions, and update the spec in Litchi |
 | `/paca-breakdown <task>` | Decompose a task into independent, estimable sub-tasks |
 | `/paca-sprint` | Plan a sprint from the backlog against capacity and goals |
 | `/paca-estimate <task(s)>` | Estimate story points and write them back to tasks |
 | `/paca-prioritize` | Score and set priorities across the backlog |
 | `/paca-do <task>` | Execute a task, update its status, and keep docs current |
 | `/paca-test <task>` | Derive test cases, run them, and record results as a comment |
-| `/paca-doc <task-or-topic>` | Write or update documentation in Paca Docs |
+| `/paca-doc <task-or-topic>` | Write or update documentation in Litchi Docs |
 | `/paca-setup` | Interactive MCP connection wizard |
 
 For full setup options and command reference, see [docs/guides/claude-code-skill.md](docs/guides/claude-code-skill.md).
@@ -423,13 +423,11 @@ See [docs/architecture/overview.md](docs/architecture/overview.md) for detail.
 
 ---
 
-## The "Paca" Story
+## The "Litchi" Story
 
-The name is a small pun on the Japanese word **"Baka" (ばか)** — "silly."
+The name comes from the lychee fruit -- small, sweet, and full of surprises once you get past the shell.
 
-In the early days, we jokingly called our AI assistants "silly" when they hallucinated. And building a serious project management platform as a free, open-source alternative to multi-billion-dollar tools might also seem a bit silly.
-
-But Paca is built from conviction: human-AI collaboration in a real Scrum team should be accessible to every team, everywhere — not locked behind a vendor's pricing model. We think that's worth being a little foolish about. 🦙✨
+Litchi is built from conviction: human-AI collaboration in a real Scrum team should be accessible to every team, everywhere -- not locked behind a vendor's pricing model. We think that's worth being a little foolish about.
 
 ---
 
@@ -441,7 +439,7 @@ But Paca is built from conviction: human-AI collaboration in a real Scrum team s
 | [docs/guides/getting-started.md](docs/guides/getting-started.md) | Getting started (install, Docker, local dev) |
 | [docs/guides/local-development.md](docs/guides/local-development.md) | Contributor dev environment setup |
 | [docs/guides/mcp-server-setup.md](docs/guides/mcp-server-setup.md) | Connect AI agents via MCP |
-| [docs/guides/claude-code-skill.md](docs/guides/claude-code-skill.md) | `/paca` skill for Claude Code — manage Paca from your editor |
+| [docs/guides/claude-code-skill.md](docs/guides/claude-code-skill.md) | `/paca` skill for Claude Code — manage Litchi from your editor |
 | [docs/plugins/](docs/plugins/) | Plugin system: backend (WASM) and frontend |
 | [deploy/README.md](deploy/README.md) | Full deployment reference |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute |

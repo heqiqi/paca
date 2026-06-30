@@ -1,4 +1,4 @@
-"""SQLAlchemy ORM models for the Paca API."""
+"""SQLAlchemy ORM models for the Litchi API."""
 
 from app.models.api_key import APIKey
 from app.models.attachment import File, TaskAttachment

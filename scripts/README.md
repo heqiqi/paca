@@ -1,6 +1,6 @@
 # Local Plugin Management Scripts
 
-This collection of scripts automates the process of building, installing, and removing Paca plugins.
+This collection of scripts automates the process of building, installing, and removing Litchi plugins.
 
 ## Available Scripts
 
@@ -48,7 +48,7 @@ export API_KEY=your-api-key-here
 ### Options
 
 - `-h, --help`: Show help message
-- `--paca-dir DIR`: Path to Paca project directory (default: auto-detected)
+- `--paca-dir DIR`: Path to Litchi project directory (default: auto-detected)
 - `--api-url URL`: API base URL (default: http://localhost)
 - `--api-key KEY`: API key for authentication (required)
 - `--skip-build`: Skip building (only install via API)
@@ -56,7 +56,7 @@ export API_KEY=your-api-key-here
 
 ### Environment Variables
 
-- `PACA_DIR`: Path to Paca project directory
+- `PACA_DIR`: Path to Litchi project directory
 - `API_URL`: API base URL
 - `API_KEY`: API key for authentication (required)
 
@@ -121,7 +121,7 @@ source ~/.bashrc
 6. **Populates frontend store** - Copies built assets to `plugins/local/frontend/<plugin-id>/`
 7. **Authenticates with API** - Validates API key
 8. **Checks for existing plugins** - Determines if the plugin is already installed
-9. **Installs or updates plugin** - Calls the Paca API to register the plugin
+9. **Installs or updates plugin** - Calls the Litchi API to register the plugin
 
 ## Directory Structure
 
@@ -175,7 +175,7 @@ Do you want to update the existing plugin? (y/N)
 
 ### API Connection Fails
 
-- Ensure Paca services are running: `docker compose -f deploy/docker-compose.dev.yml up -d`
+- Ensure Litchi services are running: `docker compose -f deploy/docker-compose.dev.yml up -d`
 - Verify the API URL is correct: `curl http://localhost/api/v1/health`
 - Check API key is valid and not revoked: see [API Key Guide](./API_KEY_GUIDE.md)
 
@@ -189,15 +189,15 @@ The script needs write permissions to the `plugins/local/` directory and its sub
 - **Bun** (for building frontend)
 - **jq** (for JSON parsing, used when checking existing plugins)
 - **curl** (for API calls)
-- **Paca API key** (required - see [API Key Guide](./API_KEY_GUIDE.md))
-- Paca API services running and accessible
+- **Litchi API key** (required - see [API Key Guide](./API_KEY_GUIDE.md))
+- Litchi API services running and accessible
 
 ## Integration with Development Workflow
 
 Add this to your `~/.bashrc` or `~/.zshrc` for quick access:
 
 ```bash
-# Paca plugin management helpers
+# Litchi plugin management helpers
 alias paca-install='/Volumes/HaiSSD/Projects/paca/scripts/install-local-plugin.sh'
 alias paca-remove='/Volumes/HaiSSD/Projects/paca/scripts/remove-plugin.sh'
 ```
@@ -231,7 +231,7 @@ export API_KEY=your-api-key
 
 ### What Gets Removed
 
-- Plugin registration from Paca API
+- Plugin registration from Litchi API
 - Backend artifacts (WASM binary, migrations, manifest)
 - Frontend artifacts (JS/CSS bundles)
 - MCP artifacts (if present)

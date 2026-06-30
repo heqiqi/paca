@@ -314,7 +314,7 @@ jobs:
   # ─────────────────────────────────────────────────────────────────────────────
   # Deployment assets → GitHub Release
   #
-  # Uploads four files so that users can run or upgrade Paca without cloning the repo:
+  # Uploads four files so that users can run or upgrade Litchi without cloning the repo:
   #   install.sh         — interactive setup wizard (download + configure + start)
   #   upgrade.sh         — upgrades an existing installation in place
   #   docker-compose.yml — standalone compose referencing pre-built DockerHub images

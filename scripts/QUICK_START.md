@@ -70,7 +70,7 @@ curl -X POST http://localhost/api/v1/admin/plugins \
 
 - Go compiler
 - Bun package manager
-- Paca services running
+- Litchi services running
 - API key (required - see [API Key Guide](./API_KEY_GUIDE.md))
 
 ## Troubleshooting
@@ -105,7 +105,7 @@ export API_KEY=your-api-key-here
 
 ## How to Get an API Key
 
-1. Log in to Paca web interface
+1. Log in to Litchi web interface
 2. Go to Settings → API Keys
 3. Create a new API key
 4. Copy the key and use it with the `--api-key` option or `API_KEY` environment variable

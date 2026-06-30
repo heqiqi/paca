@@ -34,7 +34,7 @@ def _agent_config(
 
 @pytest.fixture
 def catalog():
-    """Stub Paca's known-provider catalog so tests don't depend on data/llm_models.json."""
+    """Stub Litchi's known-provider catalog so tests don't depend on data/llm_models.json."""
     with patch("src.agent.builder.llm_catalog.load") as m:
         m.return_value = {"anthropic": {}, "openai": {}}
         yield m

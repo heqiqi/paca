@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # =============================================================================
-# Paca — Bare-metal deployment with Python/FastAPI backend (no Docker)
+# Litchi — Bare-metal deployment with Python/FastAPI backend (no Docker)
 # =============================================================================
 #
-# Deploys Paca using the Python/FastAPI API backend instead of Go.
+# Deploys Litchi using the Python/FastAPI API backend instead of Go.
 # No Docker required — everything runs natively on the host.
 #
 # Designed for: AWS Graviton (aarch64), or any x86_64 Linux
@@ -68,7 +68,7 @@ else
 fi
 
 info "═══════════════════════════════════════════════════════════════"
-info "  Paca — Python/FastAPI Bare-metal Deployment"
+info "  Litchi — Python/FastAPI Bare-metal Deployment"
 info "═══════════════════════════════════════════════════════════════"
 info "  OS:         $OS_ID ($ARCH)"
 info "  Target:     $PACA_HOME"
@@ -283,7 +283,7 @@ DATABASE_URL="postgresql+asyncpg://${PG_USER}:${PG_PASSWORD}@localhost:5432/${PG
 
 sudo -u "$PACA_USER" tee "$PACA_HOME/config/paca.env" > /dev/null << EOF
 # ═══════════════════════════════════════════════════════════════
-# Paca Configuration (Python/FastAPI backend)
+# Litchi Configuration (Python/FastAPI backend)
 # Generated: $(date -Iseconds)
 # ═══════════════════════════════════════════════════════════════
 
@@ -343,7 +343,7 @@ info "[11/12] Creating Caddyfile and systemd services..."
 
 # --- Caddyfile ---
 tee /etc/caddy/Caddyfile > /dev/null << EOF
-# Paca Gateway (Python backend)
+# Litchi Gateway (Python backend)
 :${CADDY_HTTP_PORT} {
     encode gzip
 
@@ -382,7 +382,7 @@ EOF
 # --- paca-api.service (Python/FastAPI with uvicorn) ---
 tee /etc/systemd/system/paca-api.service > /dev/null << EOF
 [Unit]
-Description=Paca API (Python/FastAPI)
+Description=Litchi API (Python/FastAPI)
 After=network.target postgresql.service $VALKEY_SVC.service
 Requires=postgresql.service
 
@@ -417,7 +417,7 @@ EOF
 # --- paca-realtime.service ---
 tee /etc/systemd/system/paca-realtime.service > /dev/null << EOF
 [Unit]
-Description=Paca Realtime (Socket.IO)
+Description=Litchi Realtime (Socket.IO)
 After=network.target $VALKEY_SVC.service paca-api.service
 
 [Service]
@@ -445,7 +445,7 @@ EOF
 # --- paca-caddy.service ---
 tee /etc/systemd/system/paca-caddy.service > /dev/null << EOF
 [Unit]
-Description=Paca Gateway (Caddy)
+Description=Litchi Gateway (Caddy)
 After=network.target paca-api.service paca-realtime.service
 
 [Service]
@@ -501,7 +501,7 @@ fi
 # =============================================================================
 echo ""
 echo -e "${GREEN}═══════════════════════════════════════════════════════════════${NC}"
-echo -e "${GREEN}  ✅ Paca deployed successfully! (Python/FastAPI backend)${NC}"
+echo -e "${GREEN}  ✅ Litchi deployed successfully! (Python/FastAPI backend)${NC}"
 echo -e "${GREEN}═══════════════════════════════════════════════════════════════${NC}"
 echo ""
 echo -e "  ${BLUE}URL:${NC}            $PUBLIC_URL"
@@ -540,7 +540,7 @@ echo "  Shell:     psql -U $PG_USER -d $PG_DB"
 echo ""
 echo "  ─── Claude Code Integration ───────────────────────────────────"
 echo ""
-echo "  # After generating API key in Paca UI (Settings → API Keys):"
+echo "  # After generating API key in Litchi UI (Settings → API Keys):"
 echo "  claude mcp add paca \\"
 echo "    --env PACA_API_KEY=<your-key> \\"
 echo "    --env PACA_API_URL=$PUBLIC_URL \\"

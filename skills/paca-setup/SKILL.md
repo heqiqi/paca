@@ -1,10 +1,10 @@
 ---
 name: paca-setup
-description: Configure the Paca MCP server for use with Claude Code or Claude Desktop. Use when setting up Paca for the first time, adding or editing the MCP server config, troubleshooting connectivity, or installing the Paca skills globally. Walks the user through prerequisites, config file generation, verification, and optional global skill install.
-compatibility: Requires Node.js 18+ and a running Paca instance.
+description: Configure the Litchi MCP server for use with Claude Code or Claude Desktop. Use when setting up Litchi for the first time, adding or editing the MCP server config, troubleshooting connectivity, or installing the Litchi skills globally. Walks the user through prerequisites, config file generation, verification, and optional global skill install.
+compatibility: Requires Node.js 18+ and a running Litchi instance.
 ---
 
-You are helping the user configure the Paca MCP server for their Claude Code environment.
+You are helping the user configure the Litchi MCP server for their Claude Code environment.
 
 Walk the user through the setup interactively, step by step. Do not dump all instructions at once — confirm each step before proceeding.
 
@@ -15,9 +15,9 @@ Walk the user through the setup interactively, step by step. Do not dump all ins
 ### Step 1 — Check prerequisites
 
 Ask the user to confirm:
-- [ ] Paca is running (local: `http://localhost:8080`, or their hosted URL)
+- [ ] Litchi is running (local: `http://localhost:8080`, or their hosted URL)
 - [ ] Node.js 18+ is installed (`node --version`)
-- [ ] They have a Paca API key (Settings → API Keys inside Paca UI)
+- [ ] They have a Litchi API key (Settings → API Keys inside Litchi UI)
 
 If any prerequisite is missing, guide the user to resolve it before continuing.
 
@@ -68,15 +68,15 @@ For options B and C, show the command/snippet and ask the user to apply it.
 
 Once configured, ask the user to restart Claude Code / Claude Desktop, then test with:
 
-> "List my Paca projects"
+> "List my Litchi projects"
 
-If Paca tools appear and return results, setup is complete. If not, check:
+If Litchi tools appear and return results, setup is complete. If not, check:
 1. JSON syntax is valid
 2. API key is correct (no extra spaces)
-3. Paca API URL is reachable (`curl <PACA_API_URL>/api/v1/health`)
+3. Litchi API URL is reachable (`curl <PACA_API_URL>/api/v1/health`)
 4. Node.js / npx is in PATH
 
-### Step 6 — Install the Paca skill globally (optional)
+### Step 6 — Install the Litchi skill globally (optional)
 
 Offer to run the global skill installer so `/paca` and related skills are always available:
 
@@ -92,5 +92,5 @@ Review the script before running it — `curl | bash` executes remote code direc
 
 | Variable | Required | Description |
 |---|---|---|
-| `PACA_API_KEY` | Yes | API key from Paca → Settings → API Keys |
-| `PACA_API_URL` | No (default: `http://localhost:8080`) | Your Paca instance URL |
+| `PACA_API_KEY` | Yes | API key from Litchi → Settings → API Keys |
+| `PACA_API_URL` | No (default: `http://localhost:8080`) | Your Litchi instance URL |

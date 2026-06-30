@@ -18,7 +18,7 @@ import type {
 import { markdownToBlocknote } from "../utils/index.js";
 
 /**
- * Paca API client for interacting with the Paca backend.
+ * Litchi API client for interacting with the Litchi backend.
  * Handles authentication, HTTP requests, and format conversions.
  */
 export class PacaAPIClient {
@@ -29,7 +29,7 @@ export class PacaAPIClient {
 	}
 
 	/**
-	 * Makes an HTTP request to the Paca API.
+	 * Makes an HTTP request to the Litchi API.
 	 * Handles SuccessEnvelope wrapper by extracting data.data.
 	 * @param method - HTTP method
 	 * @param path - API path

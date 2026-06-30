@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # =============================================================================
-# Paca — Bare-metal source deployment script (no Docker)
+# Litchi — Bare-metal source deployment script (no Docker)
 # =============================================================================
 #
-# Deploys all Paca services directly on the host from source code.
+# Deploys all Litchi services directly on the host from source code.
 # Designed for AWS Graviton (aarch64) or any Linux (amd64).
 #
 # Tested on: Amazon Linux 2023, Ubuntu 22.04/24.04, Debian 12
@@ -70,7 +70,7 @@ ENCRYPTION_KEY=$(openssl rand -hex 32)
 PUBLIC_URL="${PUBLIC_URL:-http://$(hostname -I | awk '{print $1}')}"
 
 info "═══════════════════════════════════════════════════════════════"
-info "  Paca — Bare-metal Source Deployment"
+info "  Litchi — Bare-metal Source Deployment"
 info "═══════════════════════════════════════════════════════════════"
 info ""
 info "  Target directory:  $PACA_HOME"
@@ -366,7 +366,7 @@ write_env_config() {
 
     sudo -u "$PACA_USER" tee "$PACA_HOME/config/paca.env" > /dev/null << EOF
 # ═══════════════════════════════════════════════════════════════
-# Paca Environment Configuration
+# Litchi Environment Configuration
 # Generated: $(date -Iseconds)
 # ═══════════════════════════════════════════════════════════════
 
@@ -434,7 +434,7 @@ write_caddyfile() {
     info "Writing Caddy configuration..."
 
     sudo tee /etc/caddy/Caddyfile > /dev/null << EOF
-# Paca Gateway — bare-metal deployment
+# Litchi Gateway — bare-metal deployment
 :${CADDY_HTTP_PORT} {
     encode gzip
 
@@ -481,7 +481,7 @@ create_systemd_units() {
     # --- paca-api.service ---
     sudo tee /etc/systemd/system/paca-api.service > /dev/null << EOF
 [Unit]
-Description=Paca API Service (Go)
+Description=Litchi API Service (Go)
 After=network.target postgresql.service valkey.service
 Requires=postgresql.service
 
@@ -511,7 +511,7 @@ EOF
     # --- paca-realtime.service ---
     sudo tee /etc/systemd/system/paca-realtime.service > /dev/null << EOF
 [Unit]
-Description=Paca Realtime Service (Socket.IO)
+Description=Litchi Realtime Service (Socket.IO)
 After=network.target valkey.service paca-api.service
 
 [Service]
@@ -540,7 +540,7 @@ EOF
     # --- paca-caddy.service (override default caddy) ---
     sudo tee /etc/systemd/system/paca-caddy.service > /dev/null << EOF
 [Unit]
-Description=Paca Gateway (Caddy)
+Description=Litchi Gateway (Caddy)
 After=network.target paca-api.service paca-realtime.service
 
 [Service]
@@ -566,7 +566,7 @@ EOF
 # ─── Step 11: Start services ─────────────────────────────────────────────────
 
 start_services() {
-    info "Starting Paca services..."
+    info "Starting Litchi services..."
 
     sudo systemctl enable --now paca-api
     sleep 2  # Wait for API to start and run migrations
@@ -603,7 +603,7 @@ verify_deployment() {
 print_summary() {
     echo ""
     echo -e "${GREEN}═══════════════════════════════════════════════════════════════${NC}"
-    echo -e "${GREEN}  ✅ Paca deployment complete!${NC}"
+    echo -e "${GREEN}  ✅ Litchi deployment complete!${NC}"
     echo -e "${GREEN}═══════════════════════════════════════════════════════════════${NC}"
     echo ""
     echo -e "  ${BLUE}Access URL:${NC}     $PUBLIC_URL"
@@ -641,7 +641,7 @@ print_summary() {
     echo ""
     echo "  ─── Claude Code Integration ────────────────────────────────"
     echo ""
-    echo "  # Generate an API key in Paca UI (Settings → API Keys), then:"
+    echo "  # Generate an API key in Litchi UI (Settings → API Keys), then:"
     echo "  claude mcp add paca \\"
     echo "    --env PACA_API_KEY=<your-api-key> \\"
     echo "    --env PACA_API_URL=$PUBLIC_URL \\"

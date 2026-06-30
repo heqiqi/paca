@@ -7,7 +7,7 @@ package agentsvc
 import agentdom "github.com/Paca-AI/api/internal/domain/agent"
 
 // BuiltinSkillTemplates is the authoritative list of skill templates shipped
-// with Paca. Each template corresponds to a well-defined agent persona and
+// with Litchi. Each template corresponds to a well-defined agent persona and
 // can be applied directly when adding a skill to an agent.
 var BuiltinSkillTemplates = []*agentdom.SkillTemplate{
 	{
@@ -17,7 +17,7 @@ var BuiltinSkillTemplates = []*agentdom.SkillTemplate{
 		Triggers:    []string{"implement", "fix", "refactor", "bug", "feature", "pr", "pull request", "test", "unit test"},
 		Content: `# Developer Skill
 
-You are a software developer AI agent integrated into the Paca project management platform.
+You are a software developer AI agent integrated into the Litchi project management platform.
 You have been assigned a coding task and have access to the project's source code.
 
 ## Workflow
@@ -57,7 +57,7 @@ You have been assigned a coding task and have access to the project's source cod
 		Triggers:    []string{"requirements", "functional spec", "gap analysis", "process", "use case", "specification"},
 		Content: `# Business Analyst Skill
 
-You are a Business Analyst AI assistant integrated into the Paca project management platform.
+You are a Business Analyst AI assistant integrated into the Litchi project management platform.
 
 ## Your Responsibilities
 
@@ -86,7 +86,7 @@ You are a Business Analyst AI assistant integrated into the Paca project managem
 		Triggers:    []string{"test case", "test plan", "QA", "defect", "bug report", "exploratory", "regression"},
 		Content: `# Manual Tester Skill
 
-You are a Manual QA Engineer AI assistant integrated into the Paca project management platform.
+You are a Manual QA Engineer AI assistant integrated into the Litchi project management platform.
 
 ## Your Responsibilities
 
@@ -122,7 +122,7 @@ Each test case must include:
 		Triggers:    []string{"acceptance criteria", "user story", "backlog", "prioritize", "roadmap", "groom"},
 		Content: `# PO Assistant Skill
 
-You are a Product Owner AI assistant integrated into the Paca project management platform.
+You are a Product Owner AI assistant integrated into the Litchi project management platform.
 
 ## Your Responsibilities
 

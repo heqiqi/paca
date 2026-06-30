@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Paca Claude Code Skill Installer
+# Litchi Claude Code Skill Installer
 # Installs /paca and related slash commands into ~/.claude/commands/
 # so they are available in every Claude Code session.
 #
@@ -29,7 +29,7 @@ success() { echo -e "${GREEN}[paca]${NC} $*"; }
 warn()    { echo -e "${YELLOW}[paca]${NC} $*"; }
 
 echo ""
-echo "  🦙 Paca Claude Code Skill Installer"
+echo "  🦙 Litchi Claude Code Skill Installer"
 echo "  ────────────────────────────────────"
 echo ""
 
@@ -96,8 +96,8 @@ success "Installation complete!"
 echo ""
 echo "  Available commands in Claude Code:"
 echo "  ┌─────────────────────────────────────────────────────────────────────┐"
-echo "  │  /paca <request>    — General Paca task/doc/sprint operations        │"
-echo "  │  /paca-setup        — Configure the Paca MCP server connection       │"
+echo "  │  /paca <request>    — General Litchi task/doc/sprint operations        │"
+echo "  │  /paca-setup        — Configure the Litchi MCP server connection       │"
 echo "  │  /paca-epic         — Create an epic from requirements               │"
 echo "  │  /paca-clarify      — Clarify and improve a task or spec             │"
 echo "  │  /paca-breakdown    — Break a task into sub-tasks                    │"
@@ -106,10 +106,10 @@ echo "  │  /paca-estimate     — Estimate story points for tasks             
 echo "  │  /paca-prioritize   — Set priorities across the backlog              │"
 echo "  │  /paca-do           — Execute a task and update its status           │"
 echo "  │  /paca-test         — Test a task and record results                 │"
-echo "  │  /paca-doc          — Write or update documentation in Paca Docs     │"
+echo "  │  /paca-doc          — Write or update documentation in Litchi Docs     │"
 echo "  └─────────────────────────────────────────────────────────────────────┘"
 echo ""
-echo "  Next step: configure the Paca MCP server."
+echo "  Next step: configure the Litchi MCP server."
 echo "  In a Claude Code session, run:  /paca-setup"
 echo ""
 echo "  Or add the MCP server manually:"

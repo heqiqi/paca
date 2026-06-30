@@ -1,6 +1,6 @@
 # Database Schema
 
-Interactive diagram: [https://dbdiagram.io/d/Paca-69c212ae78c6c4bc7a4fc190](https://dbdiagram.io/d/Paca-69c212ae78c6c4bc7a4fc190)
+Interactive diagram: [https://dbdiagram.io/d/Litchi-69c212ae78c6c4bc7a4fc190](https://dbdiagram.io/d/Litchi-69c212ae78c6c4bc7a4fc190)
 
 > **Note:** The DBML diagram above may lag behind the latest migrations. The authoritative source is `services/api/migrations/`. The schema below reflects the current migration state.
 

@@ -23,7 +23,7 @@ export function LoginFormPanel() {
 				<div className="mb-7 flex items-center gap-2.5 lg:hidden">
 					<img
 						src={logoSrc}
-						alt="Paca logo"
+						alt="Litchi logo"
 						width={127}
 						height={175}
 						className="h-auto w-8"

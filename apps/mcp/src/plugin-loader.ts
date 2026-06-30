@@ -143,7 +143,7 @@ export class PluginRegistry {
 // ── Loader ────────────────────────────────────────────────────────────────────
 
 /**
- * Fetch all enabled plugins from the Paca API and load any that declare an
+ * Fetch all enabled plugins from the Litchi API and load any that declare an
  * `mcp.remoteEntryUrl` in their manifest.
  *
  * Failures for individual plugins are logged and skipped so that a broken

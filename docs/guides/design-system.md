@@ -1,6 +1,6 @@
 # Design System
 
-This document defines the visual language, component patterns, and interaction conventions used across Paca's web interface. Every page and component should follow these rules to maintain consistency.
+This document defines the visual language, component patterns, and interaction conventions used across Litchi's web interface. Every page and component should follow these rules to maintain consistency.
 
 **Reference implementation:** `apps/web/src/components/projects/interactions/task-detail/`
 
@@ -40,7 +40,7 @@ This document defines the visual language, component patterns, and interaction c
 
 ### High-Contrast Minimalism
 
-Paca's visual language is **High-Contrast Minimalism** — an aesthetic built on two principles that reinforce each other:
+Litchi's visual language is **High-Contrast Minimalism** — an aesthetic built on two principles that reinforce each other:
 
 **Minimalism** strips away noise. No gradient meshes, no dot grids, no layered translucency effects. Surfaces are flat, pure, and intentional. Every visual element earns its presence.
 

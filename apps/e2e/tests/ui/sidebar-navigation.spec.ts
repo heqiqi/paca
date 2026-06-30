@@ -284,7 +284,7 @@ test.describe('Sidebar Navigation - Mobile Behavior', () => {
     
     // Verify brand elements are visible in mobile sidebar
     await expect(page.getByText('paca', { exact: true })).toBeVisible();
-    const logo = page.getByRole('img', { name: /Paca Logo/i });
+    const logo = page.getByRole('img', { name: /Litchi Logo/i });
     await expect(logo).toBeVisible();
   });
 

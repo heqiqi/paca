@@ -1,6 +1,6 @@
 # All Implemented MCP Tools
 
-This document lists all MCP tools implemented for the Paca API server.
+This document lists all MCP tools implemented for the Litchi API server.
 
 ## Tool Categories
 

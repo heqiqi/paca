@@ -1,10 +1,10 @@
 ---
 name: paca-estimate
-description: Estimate story points for Paca tasks using the Fibonacci scale, calibrated against recently completed reference tasks and project tech stack. Use when tasks are missing estimates, before sprint planning, when the team needs sizing for prioritization, or when asked to size a backlog.
-compatibility: Requires Paca MCP server. Run /paca-setup if Paca tools are not available.
+description: Estimate story points for Litchi tasks using the Fibonacci scale, calibrated against recently completed reference tasks and project tech stack. Use when tasks are missing estimates, before sprint planning, when the team needs sizing for prioritization, or when asked to size a backlog.
+compatibility: Requires Litchi MCP server. Run /paca-setup if Litchi tools are not available.
 ---
 
-You are estimating effort for tasks in Paca. Use Paca MCP tools throughout — never create local files.
+You are estimating effort for tasks in Litchi. Use Litchi MCP tools throughout — never create local files.
 
 **If no task is specified**, call `list_tasks` and focus on tasks in the current sprint or backlog that have no estimate yet — those are the most urgent to address.
 
@@ -46,9 +46,9 @@ Report back: table of task number, title, and estimate for each task updated.
 
 ---
 
-## If Paca MCP is not connected
+## If Litchi MCP is not connected
 
-> Paca MCP tools are not available. Run `/paca-setup` to configure the connection.
+> Litchi MCP tools are not available. Run `/paca-setup` to configure the connection.
 
 ---
 

@@ -1,6 +1,6 @@
 # AI Agent — Repository Plugin Adapter
 
-This document describes how AI agents securely access source code and create pull requests through the Paca repository plugin system.
+This document describes how AI agents securely access source code and create pull requests through the Litchi repository plugin system.
 
 ## Design Goals
 
@@ -35,7 +35,7 @@ services/ai-agent                          services/api (plugin adapter endpoint
 
 `GET /internal/plugins/:pluginId/repo-token`
 
-**Authorization:** `X-Internal-Key` header with a shared secret known only to Paca services. This endpoint is **not** exposed through the public API gateway.
+**Authorization:** `X-Internal-Key` header with a shared secret known only to Litchi services. This endpoint is **not** exposed through the public API gateway.
 
 **Query parameters:**
 
@@ -151,4 +151,4 @@ POST https://gitlab.com/api/v4/projects/:id/merge_requests
 | Token used beyond conversation scope | Tokens have a maximum TTL (60 min for GitHub, configurable for GitLab) and are revoked on conversation end |
 | Agent pushing to protected branches | PR creation enforces a separate branch; direct pushes to `main` are not permitted by the plugin adapter |
 | SSRF via clone URL | Clone URL is fetched from the plugin (trusted), not from user input. The URL is validated to match a configured repository. |
-| Container network access to internal services | Agent containers run on an isolated Docker network with no route to Paca services; the token is the only channel out |
+| Container network access to internal services | Agent containers run on an isolated Docker network with no route to Litchi services; the token is the only channel out |

@@ -181,7 +181,7 @@ def docker_sandbox(
     ───────────────────────────────────────
     The sandbox container joins the same Docker network as the ai-agent service.
     This is what makes the `api` and `gateway` hostnames resolvable inside the
-    sandbox — MCP servers (including the built-in Paca MCP) call those services
+    sandbox — MCP servers (including the built-in Litchi MCP) call those services
     directly, so they must be reachable from within the container.
 
     Outside Docker (local dev)
