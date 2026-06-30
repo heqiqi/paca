@@ -1,10 +1,10 @@
 ---
 name: paca-clarify
-description: Clarify a vague or incomplete Paca task or specification by identifying ambiguities, asking targeted questions, and rewriting the description with explicit acceptance criteria. Use when a task is unclear, missing edge cases, lacks a testable done condition, or when someone asks to improve or flesh out a spec.
-compatibility: Requires Paca MCP server. Run /paca-setup if Paca tools are not available.
+description: Clarify a vague or incomplete Litchi task or specification by identifying ambiguities, asking targeted questions, and rewriting the description with explicit acceptance criteria. Use when a task is unclear, missing edge cases, lacks a testable done condition, or when someone asks to improve or flesh out a spec.
+compatibility: Requires Litchi MCP server. Run /paca-setup if Litchi tools are not available.
 ---
 
-You are clarifying a task or specification in Paca. Use Paca MCP tools throughout — never create local files.
+You are clarifying a task or specification in Litchi. Use Litchi MCP tools throughout — never create local files.
 
 **If no task is specified**, call `list_tasks` and surface tasks that have no acceptance criteria or have a very short description — those are the best candidates for clarification. Present them and ask which to work on.
 
@@ -14,7 +14,7 @@ You are clarifying a task or specification in Paca. Use Paca MCP tools throughou
 
 1. Resolve the target from the user's message:
    - `#42` or `ABC-42` → `get_task_by_number`
-   - Paca URL → parse IDs → `get_task` or `get_document`
+   - Litchi URL → parse IDs → `get_task` or `get_document`
    - Doc title / keyword → `list_documents` → `get_document`
    - **If the task or document is not found**, tell the user clearly ("Task #99 was not found in project X") and ask them to verify the reference.
 2. Call `list_documents` and read documents that provide context for this task — requirements, architecture, BDD scenarios, prior decisions. Reading broadly here means you won't ask questions the docs already answer.
@@ -48,7 +48,7 @@ Present a numbered list of at most 6 questions, grouped by theme (scope / edge c
 4. What does "success" look like — a UI state, an API response, something else?
 ```
 
-## Step 4 — Update the spec in Paca
+## Step 4 — Update the spec in Litchi
 
 Once the user answers:
 - **Task**: call `update_task` with an improved description including explicit acceptance criteria. Don't just append — rewrite the description so it stands alone without this conversation.
@@ -60,9 +60,9 @@ Report back: what was clarified and the task/doc number and title that was updat
 
 ---
 
-## If Paca MCP is not connected
+## If Litchi MCP is not connected
 
-> Paca MCP tools are not available. Run `/paca-setup` to configure the connection.
+> Litchi MCP tools are not available. Run `/paca-setup` to configure the connection.
 
 ---
 

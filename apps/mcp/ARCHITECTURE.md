@@ -44,7 +44,7 @@
        │
        │ HTTP + X-API-Key
        ▼
-  Paca API (/api/v1/…)
+  Litchi API (/api/v1/…)
 ```
 
 ## Layer Responsibilities

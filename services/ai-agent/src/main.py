@@ -43,7 +43,7 @@ async def lifespan(app: FastAPI):
         await close_client()
 
 
-app = FastAPI(title="Paca AI-Agent Service", lifespan=lifespan)
+app = FastAPI(title="Litchi AI-Agent Service", lifespan=lifespan)
 
 app.include_router(health_router)
 app.include_router(llm_router)

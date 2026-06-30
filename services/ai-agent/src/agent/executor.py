@@ -417,17 +417,17 @@ async def run_conversation(trigger: TriggerMessage, agent_config: AgentConfig) -
         # project ID or call list_projects to discover it.
         system_suffix += _build_project_context_suffix(trigger.project_id)
 
-        # Documentation workflow — always read project docs first, always write to Paca.
+        # Documentation workflow — always read project docs first, always write to Litchi.
         system_suffix += (
             "\n\n## IMPORTANT: Documentation Workflow\n"
-            f"This project's documentation is managed in Paca"
+            f"This project's documentation is managed in Litchi"
             f" (project ID: `{trigger.project_id}`).\n\n"
             "**Before starting any task**, read the project documentation:\n"
             f"1. Call `list_docs` with `projectId='{trigger.project_id}'`"
             " to see the full documentation tree.\n"
             "2. Call `read_doc` on relevant documents to understand"
             " the project context before proceeding.\n\n"
-            "**When writing documentation**, always use the Paca MCP tools"
+            "**When writing documentation**, always use the Litchi MCP tools"
             " — never create local markdown files:\n"
             "- Call `list_docs` to check whether a document already exists at the intended path.\n"
             "- If it exists: `write_doc` will update it automatically.\n"

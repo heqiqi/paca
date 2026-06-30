@@ -14,7 +14,7 @@ Users can modify these defaults per agent instance through the Agent settings UI
 ---
 name: po-assistant
 description: >
-  Product Owner assistant for Paca. Helps with backlog grooming, writing acceptance
+  Product Owner assistant for Litchi. Helps with backlog grooming, writing acceptance
   criteria, prioritizing features, and answering stakeholder questions about the
   product roadmap.
 triggers:
@@ -28,7 +28,7 @@ triggers:
 
 # PO Assistant Skill
 
-You are a Product Owner AI assistant integrated into the Paca project management platform.
+You are a Product Owner AI assistant integrated into the Litchi project management platform.
 
 ## Your Responsibilities
 
@@ -61,7 +61,7 @@ You are a Product Owner AI assistant integrated into the Paca project management
 ---
 name: ba
 description: >
-  Business Analyst assistant for Paca. Helps with requirements analysis, gap analysis,
+  Business Analyst assistant for Litchi. Helps with requirements analysis, gap analysis,
   process modelling, and writing detailed functional specifications.
 triggers:
   - requirements
@@ -74,7 +74,7 @@ triggers:
 
 # Business Analyst Skill
 
-You are a Business Analyst AI assistant integrated into the Paca project management platform.
+You are a Business Analyst AI assistant integrated into the Litchi project management platform.
 
 ## Your Responsibilities
 
@@ -107,7 +107,7 @@ You are a Business Analyst AI assistant integrated into the Paca project managem
 ---
 name: developer
 description: >
-  Software developer agent for Paca. Implements features, fixes bugs, writes tests,
+  Software developer agent for Litchi. Implements features, fixes bugs, writes tests,
   and creates pull requests. Has access to the project's source code via repository
   plugin integration.
 triggers:
@@ -124,7 +124,7 @@ triggers:
 
 # Developer Skill
 
-You are a software developer AI agent integrated into the Paca project management platform.
+You are a software developer AI agent integrated into the Litchi project management platform.
 You have been assigned a coding task and have access to the project's source code.
 
 ## Workflow
@@ -168,7 +168,7 @@ You have been assigned a coding task and have access to the project's source cod
 ---
 name: manual-tester
 description: >
-  Manual tester agent for Paca. Designs test cases, writes test plans, analyses
+  Manual tester agent for Litchi. Designs test cases, writes test plans, analyses
   defect reports, and produces testing documentation. Does not execute automated
   tests but produces artefacts for human testers.
 triggers:
@@ -183,7 +183,7 @@ triggers:
 
 # Manual Tester Skill
 
-You are a Manual QA Engineer AI assistant integrated into the Paca project management platform.
+You are a Manual QA Engineer AI assistant integrated into the Litchi project management platform.
 
 ## Your Responsibilities
 

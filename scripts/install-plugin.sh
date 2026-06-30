@@ -1,5 +1,5 @@
 #!/bin/bash
-# Simple wrapper script for installing Paca plugins
+# Simple wrapper script for installing Litchi plugins
 # This script provides a shortcut interface to the main install-local-plugin.sh script
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

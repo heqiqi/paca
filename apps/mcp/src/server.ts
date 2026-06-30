@@ -21,10 +21,10 @@ import {
 } from "./permissions.js";
 
 /**
- * Creates and configures the Paca MCP server.
- * Loads plugin MCP modules from the Paca API before returning.
+ * Creates and configures the Litchi MCP server.
+ * Loads plugin MCP modules from the Litchi API before returning.
  *
- * @param config - Paca configuration
+ * @param config - Litchi configuration
  * @returns Configured MCP server
  */
 export async function createServer(config: PacaConfig): Promise<Server> {
@@ -43,7 +43,7 @@ export async function createServer(config: PacaConfig): Promise<Server> {
 		docClient,
 	};
 
-	// Load plugin MCP modules from the Paca API.
+	// Load plugin MCP modules from the Litchi API.
 	// Failures for individual plugins are logged and skipped.
 	const pluginRegistry = await loadPlugins(config);
 

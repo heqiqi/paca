@@ -1,7 +1,7 @@
 export function LoginFooter() {
 	return (
 		<footer className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 px-5 pb-5 pt-2 text-xs text-(--sea-ink-soft)/60">
-			<span>© {new Date().getFullYear()} Paca</span>
+			<span>© {new Date().getFullYear()} Litchi</span>
 			<span className="opacity-40">·</span>
 			<a
 				href="https://github.com/Paca-AI/paca"

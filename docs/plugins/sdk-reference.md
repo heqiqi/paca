@@ -1,6 +1,6 @@
 # Plugin SDK Reference
 
-The Paca Plugin SDK consists of three packages:
+The Litchi Plugin SDK consists of three packages:
 
 - **`@paca-ai/plugin-sdk-react`** — TypeScript/React SDK for frontend plugin components.
   - Repository: [github.com/Paca-AI/plugin-sdk-react](https://github.com/Paca-AI/plugin-sdk-react)
@@ -48,7 +48,7 @@ interface PluginSDK {
 
 ### `PluginApiClient`
 
-The API client provides typed wrappers for common Paca API calls and plugin route helpers. The host creates and injects the instance — plugins must not construct their own.
+The API client provides typed wrappers for common Litchi API calls and plugin route helpers. The host creates and injects the instance — plugins must not construct their own.
 
 ```ts
 class PluginApiClient {
@@ -490,7 +490,7 @@ Key `plugintest` API:
 
 ## MCP SDK (`@paca-ai/plugin-sdk-mcp`)
 
-Use this SDK to add MCP tools to your plugin. The Paca MCP server loads your plugin's entry module at startup and merges the exported tools into its tool list.
+Use this SDK to add MCP tools to your plugin. The Litchi MCP server loads your plugin's entry module at startup and merges the exported tools into its tool list.
 
 See [mcp-plugin-system.md](mcp-plugin-system.md) for the full architecture.
 
@@ -531,7 +531,7 @@ Runtime context injected by the host into every `handleToolCall` invocation.
 interface PluginMCPContext {
   pluginId: string;  // e.g. "com.paca.checklist"
   baseURL:  string;  // e.g. "http://localhost:8080"
-  apiKey:   string;  // Paca API key for authentication
+  apiKey:   string;  // Litchi API key for authentication
 }
 ```
 
@@ -549,7 +549,7 @@ class PluginAPIClient {
   pluginPatch<T>(path: string, body: unknown): Promise<T>
   pluginDelete(path: string): Promise<void>
 
-  // Core Paca API (prefix: /api/v1/)
+  // Core Litchi API (prefix: /api/v1/)
   coreGet<T>(path: string): Promise<T>
 }
 ```

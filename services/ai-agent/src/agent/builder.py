@@ -69,7 +69,7 @@ def build_mcp_config(
 ) -> dict:
     """Build the MCP server configuration dict for the OpenHands SDK.
 
-    User-configured servers come first; the built-in Paca MCP server is always
+    User-configured servers come first; the built-in Litchi MCP server is always
     appended last so it cannot be overridden by user entries.
     """
     servers: dict = {}

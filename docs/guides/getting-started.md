@@ -84,10 +84,10 @@ a specific version, passing through `--scale` flags, or upgrading manually.
 
 ## Connect an AI Agent via MCP
 
-After Paca is running:
+After Litchi is running:
 
 1. Generate an API key: **Settings → API Keys → New Key**
-2. Add the Paca MCP server to your agent config (Claude Desktop example):
+2. Add the Litchi MCP server to your agent config (Claude Desktop example):
 
 ```json
 {

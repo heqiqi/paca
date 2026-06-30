@@ -1,5 +1,5 @@
 #!/bin/bash
-# Simple wrapper script for removing Paca plugins
+# Simple wrapper script for removing Litchi plugins
 # This script provides a shortcut interface to the main remove-plugin.sh script
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

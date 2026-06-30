@@ -1,6 +1,6 @@
-# Paca Roadmap
+# Litchi Roadmap
 
-This document outlines the planned development trajectory for Paca. It is updated as priorities shift and milestones are reached.
+This document outlines the planned development trajectory for Litchi. It is updated as priorities shift and milestones are reached.
 
 > **Legend:** ✅ Done &nbsp;·&nbsp; 🚧 In progress &nbsp;·&nbsp; 📋 Planned &nbsp;·&nbsp; 💡 Exploring
 
@@ -63,7 +63,7 @@ _Goal: a working, self-hostable core that a small team can actually use._
 
 ## Phase 2 — Beta
 
-_Goal: deliver the features that make Paca meaningfully different from standard project tools._
+_Goal: deliver the features that make Litchi meaningfully different from standard project tools._
 
 ### Infrastructure & Deployment
 - 📋 ARM64 Docker image support
@@ -134,7 +134,7 @@ _These are ideas we find compelling but have not yet committed to._
 - 💡 Mobile-friendly progressive web app (PWA)
 - 💡 Multi-agent orchestration — agents that delegate sub-tasks to other agents
 - 💡 Git repository integration as a first-class feature (branch ↔ task linking, PR status on board)
-- 💡 Multi-workspace / organization support
+- 📋 Multi-workspace / organization support
 - 💡 Hosted cloud option (opt-in, for teams that don't want to self-host)
 
 ---
@@ -144,7 +144,7 @@ _These are ideas we find compelling but have not yet committed to._
 This is an open-source project — the roadmap is shaped by the community.
 
 - **Vote on issues** — 👍 existing GitHub issues to signal priority
-- **Open a discussion** — propose a feature or share how you use Paca in [GitHub Discussions](https://github.com/Paca-AI/paca/discussions)
+- **Open a discussion** — propose a feature or share how you use Litchi in [GitHub Discussions](https://github.com/Paca-AI/paca/discussions)
 - **Contribute** — see [CONTRIBUTING.md](CONTRIBUTING.md) to get started
 
 Items marked 📋 are not in any fixed release order. If something here matters to your team, open an issue or pull request — that moves it forward.

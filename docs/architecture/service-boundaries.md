@@ -1,6 +1,6 @@
 # Service Boundaries
 
-Paca consists of one frontend application, an MCP server, and three backend services.
+Litchi consists of one frontend application, an MCP server, and three backend services.
 
 ## apps/web
 

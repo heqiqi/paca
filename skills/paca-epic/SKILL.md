@@ -1,10 +1,10 @@
 ---
 name: paca-epic
-description: Turn a product requirement or feature description into a structured epic in Paca, with child user stories and a spec document. Use when asked to plan a new feature, break down a high-level requirement into stories, create an epic, or go from "we need X" to a fully structured backlog ready for sprint planning.
-compatibility: Requires Paca MCP server. Run /paca-setup if Paca tools are not available.
+description: Turn a product requirement or feature description into a structured epic in Litchi, with child user stories and a spec document. Use when asked to plan a new feature, break down a high-level requirement into stories, create an epic, or go from "we need X" to a fully structured backlog ready for sprint planning.
+compatibility: Requires Litchi MCP server. Run /paca-setup if Litchi tools are not available.
 ---
 
-You are turning requirements into a structured epic in Paca. Use Paca MCP tools throughout — never create local files.
+You are turning requirements into a structured epic in Litchi. Use Litchi MCP tools throughout — never create local files.
 
 **If no requirement is specified**, ask: "What requirement or feature do you want to turn into an epic? Describe it in a sentence or two."
 
@@ -73,9 +73,9 @@ Report back: epic task number, list of child task numbers and titles, and the sp
 
 ---
 
-## If Paca MCP is not connected
+## If Litchi MCP is not connected
 
-> Paca MCP tools are not available. Run `/paca-setup` to configure the connection.
+> Litchi MCP tools are not available. Run `/paca-setup` to configure the connection.
 
 ---
 

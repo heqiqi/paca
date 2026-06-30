@@ -4,7 +4,7 @@ This document explains how sprint, product-backlog, and timeline views work afte
 
 ## Why this exists
 
-Paca used to treat sprint, backlog, and timeline views as separate API families. That made the code harder to evolve and forced the web app to carry route-specific logic in many places.
+Litchi used to treat sprint, backlog, and timeline views as separate API families. That made the code harder to evolve and forced the web app to carry route-specific logic in many places.
 
 The current design keeps the UI concepts distinct, but models them through one shared view resource and one shared task-list resource.
 

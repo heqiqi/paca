@@ -18,19 +18,19 @@ logger = logging.getLogger(__name__)
 async def lifespan(app: FastAPI):
     """Application lifespan: startup and shutdown hooks."""
     # Startup
-    logger.info("Starting Paca API service...")
+    logger.info("Starting Litchi API service...")
     await init_redis()
     await ensure_bucket()
     await _seed_admin()
-    logger.info(f"Paca API ready on port {settings.server_port}")
+    logger.info(f"Litchi API ready on port {settings.server_port}")
     yield
     # Shutdown
     await close_redis()
-    logger.info("Paca API shut down.")
+    logger.info("Litchi API shut down.")
 
 
 app = FastAPI(
-    title="Paca API",
+    title="Litchi API",
     description="AI-native project management platform API",
     version="0.4.0",
     lifespan=lifespan,

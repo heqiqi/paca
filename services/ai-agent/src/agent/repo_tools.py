@@ -32,7 +32,7 @@ def _scrub_token(text: str, token: str) -> str:
 # NOTE: do NOT import `from ..config import settings` here.
 # This module is loaded inside the sandbox container by the remote agent server
 # (via importlib.import_module) and the container has no access to our service
-# config (database URL, internal API key, etc.).  All Paca-API coordinates are
+# config (database URL, internal API key, etc.).  All Litchi-API coordinates are
 # passed explicitly through Tool params instead.
 
 
@@ -580,7 +580,7 @@ def make_repository_tool_specs(
     """Return Tool specs (name references) for Agent instantiation.
 
     ``api_base_url`` and ``api_key`` are forwarded into every tool's params so
-    the executors can call the Paca API from inside the sandbox container
+    the executors can call the Litchi API from inside the sandbox container
     without importing our service settings.
     """
     common = {"api_base_url": api_base_url, "api_key": api_key}

@@ -1273,7 +1273,7 @@ export function AppSidebar() {
 										? "/paca-logo-dark.svg"
 										: "/paca-logo.svg"
 								}
-								alt="Paca Logo"
+								alt="Litchi Logo"
 								className="size-8 shrink-0"
 							/>
 						</Link>
@@ -1284,7 +1284,7 @@ export function AppSidebar() {
 									? "/paca-logo-dark.svg"
 									: "/paca-logo.svg"
 							}
-							alt="Paca Logo"
+							alt="Litchi Logo"
 							className="size-8 shrink-0"
 						/>
 					)}

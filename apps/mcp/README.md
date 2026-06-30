@@ -1,16 +1,16 @@
-# Paca MCP Server
+# Litchi MCP Server
 
-Model Context Protocol (MCP) server for Paca — an open-source, AI-native project management platform.
+Model Context Protocol (MCP) server for Litchi — an open-source, AI-native project management platform.
 
-Connect your AI assistant (Claude, Cursor, VS Code Copilot, etc.) to your Paca workspace and manage projects, tasks, sprints, and documents using natural language.
+Connect your AI assistant (Claude, Cursor, VS Code Copilot, etc.) to your Litchi workspace and manage projects, tasks, sprints, and documents using natural language.
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js 18+
-- A running Paca instance (local or deployed)
-- A Paca API key (generate one in your Paca user settings)
+- A running Litchi instance (local or deployed)
+- A Litchi API key (generate one in your Litchi user settings)
 
 ## Setup
 
@@ -21,7 +21,7 @@ No installation or build step required. Configure your AI agent client to use th
 | Variable | Required | Default | Description |
 |---|---|---|---|
 | `PACA_API_KEY` | ✅ | — | API key for authentication (see below) |
-| `PACA_API_URL` | ❌ | `http://localhost:8080` | URL of your Paca API instance |
+| `PACA_API_URL` | ❌ | `http://localhost:8080` | URL of your Litchi API instance |
 | `PACA_AGENT_ID` | ❌ | — | Agent UUID (required when using global agent API key) |
 | `PACA_PROJECT_ID` | ❌* | — | Project UUID for single-project mode (required when PACA_AGENT_ID is set) |
 
@@ -47,7 +47,7 @@ Add the following to your Claude Desktop config file:
 }
 ```
 
-Restart Claude Desktop after saving. Claude will automatically have access to all Paca tools.
+Restart Claude Desktop after saving. Claude will automatically have access to all Litchi tools.
 
 ### VS Code (GitHub Copilot)
 
@@ -90,7 +90,7 @@ For a full setup walkthrough, see the [MCP Server Setup Guide](../../docs/guides
 
 ## Features
 
-- **API Key Authentication**: Secure access using Paca API keys
+- **API Key Authentication**: Secure access using Litchi API keys
 - **Agent-Specific Permissions**: MCP tools are filtered based on agent's project permissions at startup
 - **Comprehensive Project Management**: Full project lifecycle with member and role management
 - **Advanced Task Management**: Tasks with types, statuses, custom fields, and attachments
@@ -114,13 +114,13 @@ The MCP server automatically filters available tools based on permissions, wheth
 | **User Single-Project** | `PACA_PROJECT_ID` only (no `PACA_AGENT_ID`) | User's personal API key | User's global + project permissions | Single project |
 | **User Global** | No `PACA_PROJECT_ID` | User's personal API key | User's global permissions only | All projects (no project-scoped tools) |
 
-**Note**: AI agents operate in single-project mode. The global `AGENT_API_KEY` is configured on the Paca server via the `AGENT_API_KEY` environment variable.
+**Note**: AI agents operate in single-project mode. The global `AGENT_API_KEY` is configured on the Litchi server via the `AGENT_API_KEY` environment variable.
 
 ### Agent Mode (Single-Project)
 
 When both `PACA_AGENT_ID` and `PACA_PROJECT_ID` are set:
 
-1. **Authentication**: Uses the global `AGENT_API_KEY` configured on the Paca server
+1. **Authentication**: Uses the global `AGENT_API_KEY` configured on the Litchi server
 2. **Impersonation**: `X-Agent-ID` header specifies which agent to act as
 3. **Permission Fetch**: Only fetches permissions for the specified project
 4. **Tool Filtering**: Shows only tools the agent has permission to use in that project
@@ -129,9 +129,9 @@ When both `PACA_AGENT_ID` and `PACA_PROJECT_ID` are set:
 
 **How to Get the Agent API Key:**
 
-The `AGENT_API_KEY` is configured on the Paca server, not per-agent. Check your server's environment:
+The `AGENT_API_KEY` is configured on the Litchi server, not per-agent. Check your server's environment:
 ```bash
-# On the Paca server
+# On the Litchi server
 echo $AGENT_API_KEY  # This is the global agent key to use
 ```
 
@@ -394,7 +394,7 @@ For a complete list of all tools with detailed descriptions, see [ALL_TOOLS.md](
 
 ### 🔌 Plugin Tools
 
-Installed Paca plugins can contribute additional MCP tools. When the server starts it fetches `GET /api/v1/plugins`, and for each enabled plugin that declares an `mcp.remoteEntryUrl` in its manifest, dynamically loads the plugin's tool module and merges its tools into the list above.
+Installed Litchi plugins can contribute additional MCP tools. When the server starts it fetches `GET /api/v1/plugins`, and for each enabled plugin that declares an `mcp.remoteEntryUrl` in its manifest, dynamically loads the plugin's tool module and merges its tools into the list above.
 
 Plugin tools appear alongside core tools — there is no distinction from the AI client's perspective.
 
@@ -411,7 +411,7 @@ This allows AI assistants to work with familiar Markdown format while the API st
 
 ## API Key Authentication
 
-All tools authenticate via the `X-API-Key` header. Generate an API key in your Paca user settings and set it as `PACA_API_KEY` in your MCP client configuration.
+All tools authenticate via the `X-API-Key` header. Generate an API key in your Litchi user settings and set it as `PACA_API_KEY` in your MCP client configuration.
 
 ## Examples
 
@@ -440,8 +440,8 @@ Arguments:
 
 ## Notes
 
-- The server requires a running Paca API instance
-- API keys can be created through the Paca web interface under user settings
+- The server requires a running Litchi API instance
+- API keys can be created through the Litchi web interface under user settings
 - All descriptions and document contents are automatically converted between Markdown and BlockNote format
 - Date fields should be provided in ISO 8601 format (e.g., `2024-01-01T00:00:00Z`)
 

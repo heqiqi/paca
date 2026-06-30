@@ -184,7 +184,7 @@ export function getSprintTools(): Tool[] {
  * Handles sprint-related tool calls.
  * @param toolName - Name of the tool being called
  * @param args - Tool arguments
- * @param client - Paca API client instance
+ * @param client - Litchi API client instance
  * @returns Tool response
  */
 export async function handleSprintTool(

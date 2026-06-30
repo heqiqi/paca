@@ -1,6 +1,6 @@
-# Paca Skill for Claude Code
+# Litchi Skill for Claude Code
 
-Use Paca directly from Claude Code CLI with the `/paca` and `/paca-setup` slash commands. Once installed, Claude will use your Paca workspace for tasks, documentation, and sprint management — instead of creating local files.
+Use Litchi directly from Claude Code CLI with the `/paca` and `/paca-setup` slash commands. Once installed, Claude will use your Litchi workspace for tasks, documentation, and sprint management — instead of creating local files.
 
 ## Install
 
@@ -22,7 +22,7 @@ The installer copies two skill files to `~/.claude/commands/`, making `/paca` an
 
 ## Configure the MCP server
 
-The skill requires the Paca MCP server to be connected. After installing the skill, run `/paca-setup` inside a Claude Code session for an interactive setup walkthrough, or follow the quick steps below.
+The skill requires the Litchi MCP server to be connected. After installing the skill, run `/paca-setup` inside a Claude Code session for an interactive setup walkthrough, or follow the quick steps below.
 
 ### Quick setup — Claude Code CLI
 
@@ -33,7 +33,7 @@ claude mcp add paca \
   -- npx -y @paca-ai/paca-mcp
 ```
 
-Replace `<your-api-key>` (from Paca → Settings → API Keys) and `<your-paca-url>` (e.g. `http://localhost:8080` or your hosted URL).
+Replace `<your-api-key>` (from Litchi → Settings → API Keys) and `<your-paca-url>` (e.g. `http://localhost:8080` or your hosted URL).
 
 ### Project-level setup (recommended for teams)
 
@@ -82,11 +82,11 @@ Restart Claude Desktop after saving.
 
 ## Commands
 
-All commands read your Paca documentation first — before taking any action, Claude calls `list_documents` and reads the relevant docs so it understands the project context. Documentation updates are always written back to Paca Docs via `update_document` or `create_document`, never as local files.
+All commands read your Litchi documentation first — before taking any action, Claude calls `list_documents` and reads the relevant docs so it understands the project context. Documentation updates are always written back to Litchi Docs via `update_document` or `create_document`, never as local files.
 
 ### `/paca <request>`
 
-General-purpose Paca operations in plain English. Routes to the right tool based on intent.
+General-purpose Litchi operations in plain English. Routes to the right tool based on intent.
 
 ```
 /paca Fix the login redirect bug, assign to sprint 3
@@ -97,7 +97,7 @@ General-purpose Paca operations in plain English. Routes to the right tool based
 
 ### `/paca-epic <requirements>`
 
-Converts requirements into a structured epic: creates the parent task, breaks it into child stories, and writes a spec document — all in Paca.
+Converts requirements into a structured epic: creates the parent task, breaks it into child stories, and writes a spec document — all in Litchi.
 
 ```
 /paca-epic As a user I want to reset my password via email
@@ -106,7 +106,7 @@ Converts requirements into a structured epic: creates the parent task, breaks it
 
 ### `/paca-clarify <task-or-doc>`
 
-Reads a task or document, identifies ambiguities (scope gaps, missing edge cases, undefined terms), asks targeted questions, then updates the spec in Paca with the resolved content.
+Reads a task or document, identifies ambiguities (scope gaps, missing edge cases, undefined terms), asks targeted questions, then updates the spec in Litchi with the resolved content.
 
 ```
 /paca-clarify #42
@@ -116,7 +116,7 @@ Reads a task or document, identifies ambiguities (scope gaps, missing edge cases
 
 ### `/paca-breakdown <task>`
 
-Decomposes a task or epic into smaller, independent, estimable sub-tasks and creates them in Paca.
+Decomposes a task or epic into smaller, independent, estimable sub-tasks and creates them in Litchi.
 
 ```
 /paca-breakdown #42
@@ -154,7 +154,7 @@ Scores tasks by business value, urgency, effort, and dependencies against the pr
 
 ### `/paca-do <task>`
 
-Executes a task end-to-end: marks it in progress, reads all relevant docs, does the work (code, writing, research), then marks it done and updates any affected Paca documentation.
+Executes a task end-to-end: marks it in progress, reads all relevant docs, does the work (code, writing, research), then marks it done and updates any affected Litchi documentation.
 
 ```
 /paca-do #42
@@ -172,7 +172,7 @@ Derives test cases from acceptance criteria, runs them, and posts results as a t
 
 ### `/paca-doc <task-or-topic>`
 
-Writes or updates a document in Paca Docs. Reads existing docs first to match tone and avoid duplication.
+Writes or updates a document in Litchi Docs. Reads existing docs first to match tone and avoid duplication.
 
 ```
 /paca-doc #42                          ← document the feature in task #42
@@ -182,7 +182,7 @@ Writes or updates a document in Paca Docs. Reads existing docs first to match to
 
 ### `/paca-setup`
 
-Interactive setup wizard. Walks you through connecting Claude Code to your Paca instance and verifying the connection.
+Interactive setup wizard. Walks you through connecting Claude Code to your Litchi instance and verifying the connection.
 
 ```
 /paca-setup
@@ -192,23 +192,23 @@ Interactive setup wizard. Walks you through connecting Claude Code to your Paca 
 
 | Variable | Required | Default | Description |
 |---|---|---|---|
-| `PACA_API_KEY` | Yes | — | API key (Paca → Settings → API Keys) |
-| `PACA_API_URL` | No | `http://localhost:8080` | Your Paca instance URL |
+| `PACA_API_KEY` | Yes | — | API key (Litchi → Settings → API Keys) |
+| `PACA_API_URL` | No | `http://localhost:8080` | Your Litchi instance URL |
 
-## Make Paca the default for your project
+## Make Litchi the default for your project
 
-To make Claude always prefer Paca tools in a project (without needing to type `/paca` every time), add this to your project's `CLAUDE.md`:
+To make Claude always prefer Litchi tools in a project (without needing to type `/paca` every time), add this to your project's `CLAUDE.md`:
 
 ```markdown
 ## Project management
 
-This project uses Paca for all project management. When working in this codebase:
+This project uses Litchi for all project management. When working in this codebase:
 
-- **Tasks and to-dos** → use `create_task` / `list_tasks` via the Paca MCP tools. Do not create local TODO files or add TODO comments.
-- **Documentation** → use `create_document` / `update_document` via Paca MCP. Do not create standalone `.md` docs unless they belong in the repository (e.g. README, CONTRIBUTING).
-- **Sprint planning** → use `create_sprint` / `list_sprints` via Paca MCP.
+- **Tasks and to-dos** → use `create_task` / `list_tasks` via the Litchi MCP tools. Do not create local TODO files or add TODO comments.
+- **Documentation** → use `create_document` / `update_document` via Litchi MCP. Do not create standalone `.md` docs unless they belong in the repository (e.g. README, CONTRIBUTING).
+- **Sprint planning** → use `create_sprint` / `list_sprints` via Litchi MCP.
 
-If Paca MCP tools are not available, say so and ask the user to run `/paca-setup`.
+If Litchi MCP tools are not available, say so and ask the user to run `/paca-setup`.
 ```
 
 ## Uninstall

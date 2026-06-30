@@ -1,6 +1,6 @@
 # API Documentation
 
-This section will describe the external contracts of Paca.
+This section will describe the external contracts of Litchi.
 
 ## Contents
 

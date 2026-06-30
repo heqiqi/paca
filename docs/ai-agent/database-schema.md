@@ -1,6 +1,6 @@
 # AI Agent — Database Schema
 
-This document describes the new tables and modifications required to support AI Agents in Paca.
+This document describes the new tables and modifications required to support AI Agents in Litchi.
 
 ## Migration
 

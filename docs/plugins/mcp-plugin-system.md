@@ -2,9 +2,9 @@
 
 ## Overview
 
-The Paca MCP server supports **plugin-contributed tools**. Each installed Paca plugin can ship a small Node.js-compatible ESM module that declares MCP tool definitions and handles tool calls. When the MCP server starts, it fetches the list of enabled plugins from the API and dynamically loads any plugin that declares an `mcp.remoteEntryUrl` in its manifest.
+The Litchi MCP server supports **plugin-contributed tools**. Each installed Litchi plugin can ship a small Node.js-compatible ESM module that declares MCP tool definitions and handles tool calls. When the MCP server starts, it fetches the list of enabled plugins from the API and dynamically loads any plugin that declares an `mcp.remoteEntryUrl` in its manifest.
 
-From the AI client's perspective, plugin tools appear alongside core Paca tools in a single flat list — there is no visible distinction.
+From the AI client's perspective, plugin tools appear alongside core Litchi tools in a single flat list — there is no visible distinction.
 
 ## Architecture
 
@@ -13,7 +13,7 @@ MCP Client (Claude, Copilot, Cursor, …)
     │
     │ stdio
     ▼
-Paca MCP Server (apps/mcp)
+Litchi MCP Server (apps/mcp)
     │
     ├── Startup: GET /api/v1/plugins
     │       │
@@ -26,7 +26,7 @@ Paca MCP Server (apps/mcp)
     │
     └── CallTool → route to plugin registry OR core handlers
                         │
-                        └── plugin handler calls Paca API
+                        └── plugin handler calls Litchi API
                               /api/v1/plugins/{pluginId}/…
 ```
 
@@ -137,7 +137,7 @@ Tool names must match `[a-z][a-z0-9_]*`.
 ## Security Considerations
 
 - Plugin MCP modules run in the **same Node.js process** as the MCP server with no sandboxing (v1). Only install plugins from trusted sources.
-- The `PluginAPIClient` authenticates using the MCP server's API key. Plugin access is scoped by Paca's existing authorization model (routes under `/api/v1/plugins/{pluginId}/`).
+- The `PluginAPIClient` authenticates using the MCP server's API key. Plugin access is scoped by Litchi's existing authorization model (routes under `/api/v1/plugins/{pluginId}/`).
 - The server fetches `remoteEntryUrl` at startup — not at every tool call — so the module is cached for the server's lifetime.
 - `http://` URLs are permitted for local development only. In production, all `remoteEntryUrl` values should use `https://`.
 

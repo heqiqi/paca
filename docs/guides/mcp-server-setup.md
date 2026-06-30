@@ -1,18 +1,18 @@
 # MCP Server Setup Guide
 
-This guide walks you through setting up the Paca MCP (Model Context Protocol) server to integrate with your AI agents, enabling them to interact with Paca projects, tasks, sprints, and documents.
+This guide walks you through setting up the Litchi MCP (Model Context Protocol) server to integrate with your AI agents, enabling them to interact with Litchi projects, tasks, sprints, and documents.
 
 ## Prerequisites
 
 Before setting up the MCP server, ensure you have:
 
-- A running Paca API instance (local or deployed)
-- An API key from your Paca instance (generate it in user settings)
+- A running Litchi API instance (local or deployed)
+- An API key from your Litchi instance (generate it in user settings)
 - Node.js 18+ installed (required by MCP clients)
 
 ## Quick Start
 
-The Paca MCP server is available as a GitHub package — no installation or build step required. Simply configure your MCP client to pull and run it directly using `npx`.
+The Litchi MCP server is available as a GitHub package — no installation or build step required. Simply configure your MCP client to pull and run it directly using `npx`.
 
 ### Package Information
 
@@ -33,7 +33,7 @@ The MCP server can be integrated with various AI agents and platforms. Below are
 
 ### Claude Desktop (Recommended)
 
-Claude Desktop provides the most seamless integration with the Paca MCP server.
+Claude Desktop provides the most seamless integration with the Litchi MCP server.
 
 **Configuration Steps:**
 
@@ -62,18 +62,18 @@ Claude Desktop provides the most seamless integration with the Paca MCP server.
 ```
 
 3. Replace the placeholder values:
-   - `your-api-key-here` with your actual Paca API key
-   - `http://localhost:8080` with your Paca API URL if different
+   - `your-api-key-here` with your actual Litchi API key
+   - `http://localhost:8080` with your Litchi API URL if different
 
 4. Restart Claude Desktop
 
-**Note**: The `npx -y @paca-ai/paca-mcp` command automatically downloads and runs the latest version of the Paca MCP server from npm.
+**Note**: The `npx -y @paca-ai/paca-mcp` command automatically downloads and runs the latest version of the Litchi MCP server from npm.
 
 **Usage in Claude Desktop:**
 
-Once configured, Claude will automatically have access to all 81 Paca tools. You can ask Claude to:
+Once configured, Claude will automatically have access to all 81 Litchi tools. You can ask Claude to:
 
-- "List all projects in my Paca workspace"
+- "List all projects in my Litchi workspace"
 - "Create a new task for user authentication"
 - "Create a sprint for the next 2 weeks"
 - "Update the task status to in progress"
@@ -81,14 +81,14 @@ Once configured, Claude will automatically have access to all 81 Paca tools. You
 
 ### Other MCP-Compatible Clients
 
-The Paca MCP server follows the standard MCP protocol and can be used with any MCP-compatible client.
+The Litchi MCP server follows the standard MCP protocol and can be used with any MCP-compatible client.
 
 **Required Configuration:**
 
 1. **Command**: Use `npx -y @paca-ai/paca-mcp` to automatically download and run the latest version
 2. **Environment Variables**:
-   - `PACA_API_KEY` (required): Your Paca API key
-   - `PACA_API_URL` (optional): Paca API URL (default: `http://localhost:8080`)
+   - `PACA_API_KEY` (required): Your Litchi API key
+   - `PACA_API_URL` (optional): Litchi API URL (default: `http://localhost:8080`)
 
 **Example Client Configuration:**
 
@@ -149,7 +149,7 @@ console.log("Projects:", result.content);
 
 ## Available Tools
 
-The Paca MCP server provides **81 tools** across **16 categories**:
+The Litchi MCP server provides **81 tools** across **16 categories**:
 
 - 📁 **Project Management** (5 tools): Create, read, update, delete projects
 - ✅ **Task Management** (6 tools): Full task lifecycle management
@@ -177,7 +177,7 @@ The MCP server automatically handles content conversion:
 - **Reading**: Fetches content as BlockNote JSON and converts to Markdown for readability
 - **Writing**: Accepts Markdown input and converts to BlockNote JSON for storage
 
-This allows your AI agent to work with familiar Markdown format while Paca stores content in rich text format.
+This allows your AI agent to work with familiar Markdown format while Litchi stores content in rich text format.
 
 ## Example Agent Interactions
 
@@ -226,7 +226,7 @@ Once configured, you can test the MCP server directly through your MCP client:
 ### Testing with Claude Desktop
 
 After restarting Claude Desktop, simply ask Claude:
-- "What Paca tools are available?"
+- "What Litchi tools are available?"
 - "List all my projects"
 - "Create a test task"
 
@@ -253,7 +253,7 @@ npm run inspector
 ### Common Issues
 
 **Issue**: "Connection refused" error
-- **Solution**: Ensure Paca API is running and `PACA_API_URL` is correct
+- **Solution**: Ensure Litchi API is running and `PACA_API_URL` is correct
 
 **Issue**: "Unauthorized" error
 - **Solution**: Verify `PACA_API_KEY` is valid and has proper permissions
@@ -261,7 +261,7 @@ npm run inspector
 **Issue**: "npx: command not found" error
 - **Solution**: Ensure Node.js 18+ is installed and npx is in your PATH
 
-**Issue**: Claude Desktop doesn't show Paca tools
+**Issue**: Claude Desktop doesn't show Litchi tools
 - **Solution**: Check config file path, verify JSON syntax, and restart Claude Desktop
 
 **Issue**: "Cannot find package '@paca-ai/paca-mcp'" error
@@ -289,7 +289,7 @@ Then run the MCP server to see detailed logs.
 
 - Explore the [complete tool documentation](../../apps/mcp/ALL_TOOLS.md)
 - Learn about the [MCP server architecture](../../apps/mcp/ARCHITECTURE.md)
-- Review [Paca API documentation](../api/README.md) for deeper integration
+- Review [Litchi API documentation](../api/README.md) for deeper integration
 - Check the [main MCP README](../../apps/mcp/README.md) for development guide
 
 ## Getting Help

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # =============================================================================
-# paca-ctl — Management utility for bare-metal Paca deployment
+# paca-ctl — Management utility for bare-metal Litchi deployment
 # =============================================================================
 #
 # Usage:
@@ -29,7 +29,7 @@ NC='\033[0m'
 case "${1:-help}" in
 
     status)
-        echo -e "${BLUE}═══ Paca Service Status ═══${NC}"
+        echo -e "${BLUE}═══ Litchi Service Status ═══${NC}"
         for svc in "${SERVICES[@]}"; do
             STATUS=$(systemctl is-active "$svc" 2>/dev/null || echo "inactive")
             if [ "$STATUS" = "active" ]; then
@@ -50,7 +50,7 @@ case "${1:-help}" in
         ;;
 
     start)
-        echo "Starting Paca services..."
+        echo "Starting Litchi services..."
         for svc in "${SERVICES[@]}"; do
             sudo systemctl start "$svc"
             echo "  Started $svc"
@@ -59,7 +59,7 @@ case "${1:-help}" in
         ;;
 
     stop)
-        echo "Stopping Paca services..."
+        echo "Stopping Litchi services..."
         for svc in $(echo "${SERVICES[@]}" | tr ' ' '\n' | tac); do
             sudo systemctl stop "$svc"
             echo "  Stopped $svc"
@@ -68,7 +68,7 @@ case "${1:-help}" in
         ;;
 
     restart)
-        echo "Restarting Paca services..."
+        echo "Restarting Litchi services..."
         for svc in "${SERVICES[@]}"; do
             sudo systemctl restart "$svc"
             echo "  Restarted $svc"
@@ -88,7 +88,7 @@ case "${1:-help}" in
         ;;
 
     upgrade)
-        echo -e "${BLUE}═══ Upgrading Paca ═══${NC}"
+        echo -e "${BLUE}═══ Upgrading Litchi ═══${NC}"
 
         echo "  Pulling latest source..."
         sudo -u paca git -C "$PACA_HOME/src" pull --ff-only
@@ -168,7 +168,7 @@ case "${1:-help}" in
         ;;
 
     help|*)
-        echo "paca-ctl — Paca bare-metal management"
+        echo "paca-ctl — Litchi bare-metal management"
         echo ""
         echo "Usage: paca-ctl <command>"
         echo ""

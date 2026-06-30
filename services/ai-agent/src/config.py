@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     # point to the gateway's internal address.
     gateway_base_url: str = "http://gateway"
 
-    # Built-in Paca MCP — the API key used by the AI agent's hardcoded paca MCP
+    # Built-in Litchi MCP — the API key used by the AI agent's hardcoded paca MCP
     # server.  Set this to the same value as AGENT_API_KEY on the api service.
     # When empty the built-in paca MCP server is not injected.
     paca_api_key: str = ""

@@ -1,4 +1,4 @@
-# Paca API (Python/FastAPI)
+# Litchi API (Python/FastAPI)
 
 Python/FastAPI rewrite of the Go API service.
 

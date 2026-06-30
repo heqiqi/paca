@@ -203,7 +203,7 @@ def make_event_callback(trigger, streams):
 - Each conversation gets a **dedicated Docker container** using `DockerWorkspace`.
 - The OpenHands `agent-server` image (`ghcr.io/openhands/agent-server:latest-python`) is used by default and can be overridden per agent type.
 - The container is automatically stopped and removed when the `DockerWorkspace` context manager exits (normal finish, stop, or unhandled error).
-- Container network access is restricted: containers are placed on an isolated Docker network that has no route to other Paca service containers.
+- Container network access is restricted: containers are placed on an isolated Docker network that has no route to other Litchi service containers.
 - Port allocation: a small port pool (`10000–10999`) is managed by the ai-agent service. Each active conversation claims one port; it is released when the conversation ends.
 - **Container resource limits** are configured at the `DockerWorkspace` level:
   - CPU: 2 cores

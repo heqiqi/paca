@@ -1,6 +1,6 @@
-# Paca Web App
+# Litchi Web App
 
-This package contains the Paca web frontend built with TanStack Start, TanStack Router, and ShadCN UI components.
+This package contains the Litchi web frontend built with TanStack Start, TanStack Router, and ShadCN UI components.
 
 ## Run Locally
 

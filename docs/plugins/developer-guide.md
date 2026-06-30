@@ -1,6 +1,6 @@
 # Plugin Developer Guide
 
-This guide walks you through building a complete Paca plugin from scratch. By the end you will have a working plugin with a backend WASM module, a frontend micro-frontend component, and a published manifest.
+This guide walks you through building a complete Litchi plugin from scratch. By the end you will have a working plugin with a backend WASM module, a frontend micro-frontend component, and a published manifest.
 
 > **Example plugin:** A fully working reference implementation is available at [github.com/Paca-AI/paca-plugin-example](https://github.com/Paca-AI/paca-plugin-example). It demonstrates every backend and frontend SDK feature and can be used as a starting point for new plugins.
 
@@ -8,13 +8,13 @@ This guide walks you through building a complete Paca plugin from scratch. By th
 
 - Go 1.21+ with TinyGo 0.32+ for WASM compilation.
 - Node.js 20+ and pnpm 9+ for the frontend.
-- A running local Paca instance (see [local-development.md](../guides/local-development.md)).
+- A running local Litchi instance (see [local-development.md](../guides/local-development.md)).
 
 ---
 
 ## Plugin Repository Layout
 
-You may develop your plugin in its own repository or as a directory inside the Paca monorepo's `plugins/` folder.
+You may develop your plugin in its own repository or as a directory inside the Litchi monorepo's `plugins/` folder.
 
 ```
 my-plugin/
@@ -95,7 +95,7 @@ my-plugin/
 }
 ```
 
-When `middlewares` is omitted on a route, Paca applies a secure default policy
+When `middlewares` is omitted on a route, Litchi applies a secure default policy
 (`optionalAuthn` + `requireFreshPassword` + project-scoped `projects.read`).
 Use explicit `middlewares` when you need different behavior (for example,
 webhook endpoints that must accept anonymous requests).
@@ -343,7 +343,7 @@ Output goes to `dist/remoteEntry.js` (and associated chunks).
 
 ## Step 3b — Write MCP Tools (optional)
 
-If you want your plugin's functionality to be accessible to AI clients (Claude, GitHub Copilot, Cursor, etc.) through the Paca MCP server, add an MCP entry module.
+If you want your plugin's functionality to be accessible to AI clients (Claude, GitHub Copilot, Cursor, etc.) through the Litchi MCP server, add an MCP entry module.
 
 ### Add `mcp` to your manifest
 
@@ -476,7 +476,7 @@ See [mcp-plugin-system.md](mcp-plugin-system.md) for the full architecture and s
 
 ## Step 4 — Install the Plugin Locally
 
-1. Copy the plugin bundle into your local Paca plugin store path:
+1. Copy the plugin bundle into your local Litchi plugin store path:
 
 ```sh
 mkdir -p /path/to/paca/plugins/dist/com.example.my-plugin
@@ -578,7 +578,7 @@ func TestListItems(t *testing.T) {
 Before sharing your plugin:
 
 - [ ] Plugin ID follows reverse-domain notation.
-- [ ] `minCoreVersion` is set to the minimum Paca version you tested against.
+- [ ] `minCoreVersion` is set to the minimum Litchi version you tested against.
 - [ ] All DB tables are within your plugin's schema.
 - [ ] No secrets or credentials are hard-coded in the WASM binary or JS bundle.
 - [ ] The WASM binary is signed with your private key (include the public key in `plugin.json` under `publisher.publicKey`).

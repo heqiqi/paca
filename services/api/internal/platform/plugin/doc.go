@@ -1,4 +1,4 @@
-// Package plugin provides the WASM plugin runtime infrastructure for the Paca
+// Package plugin provides the WASM plugin runtime infrastructure for the Litchi
 // API service.  It includes:
 //
 //   - Store: loads WASM binaries from local disk or S3.

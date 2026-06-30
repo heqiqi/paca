@@ -1,10 +1,10 @@
 ---
 name: paca-doc
-description: Write or update documentation for a feature, task, or topic in Paca Docs. Use when asked to document a completed feature, write a guide or runbook, update existing docs, create a spec or architecture document, or produce BDD scenarios. Documentation is saved in Paca — never created as local files.
-compatibility: Requires Paca MCP server. Run /paca-setup if Paca tools are not available.
+description: Write or update documentation for a feature, task, or topic in Litchi Docs. Use when asked to document a completed feature, write a guide or runbook, update existing docs, create a spec or architecture document, or produce BDD scenarios. Documentation is saved in Litchi — never created as local files.
+compatibility: Requires Litchi MCP server. Run /paca-setup if Litchi tools are not available.
 ---
 
-You are writing or updating documentation in Paca Docs. Documentation lives in Paca — never create local files for docs.
+You are writing or updating documentation in Litchi Docs. Documentation lives in Litchi — never create local files for docs.
 
 **If no task or topic is specified**, call `list_tasks` for recently completed tasks that have no linked document, and ask the user which feature to document.
 
@@ -35,11 +35,11 @@ If the type is obvious from the task or request, proceed directly. Only ask the 
 Write complete, clear Markdown:
 - Active voice and present tense
 - Code examples and command snippets where they aid understanding
-- Link to related Paca docs by title or task number
-- No "last updated" timestamps, no "Created by Claude" lines — Paca tracks history
+- Link to related Litchi docs by title or task number
+- No "last updated" timestamps, no "Created by Claude" lines — Litchi tracks history
 - No placeholder sections ("TBD", "coming soon") — write real content or omit the section
 
-## Step 4 — Save to Paca
+## Step 4 — Save to Litchi
 
 - **New document**: call `create_document` with the title and full Markdown content. Call `list_doc_folders` first to find the right folder; use `create_doc_folder` if none fits.
 - **Existing document**: call `update_document`. Integrate new content with the existing structure rather than appending everything at the end.
@@ -49,9 +49,9 @@ Report back: document title, the folder it was saved in, and the document ID.
 
 ---
 
-## If Paca MCP is not connected
+## If Litchi MCP is not connected
 
-> Paca MCP tools are not available. Run `/paca-setup` to configure the connection.
+> Litchi MCP tools are not available. Run `/paca-setup` to configure the connection.
 
 ---
 

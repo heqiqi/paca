@@ -46,7 +46,7 @@ type PluginManifest struct {
 }
 
 // MCPManifest describes the MCP (Model Context Protocol) side of the plugin.
-// When present, the Paca MCP server loads the module at RemoteEntryURL at
+// When present, the Litchi MCP server loads the module at RemoteEntryURL at
 // startup and merges the exported tools into the server's tool list.
 type MCPManifest struct {
 	// RemoteEntryURL is the URL to the plugin's MCP entry module.

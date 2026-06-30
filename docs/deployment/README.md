@@ -1,6 +1,6 @@
 # Deployment Documentation
 
-Paca ships three Docker Compose entry points under [`deploy/`](../../deploy/README.md):
+Litchi ships three Docker Compose entry points under [`deploy/`](../../deploy/README.md):
 
 - `docker-compose.dev.yml` for local development;
 - `docker-compose.prod.yml` for production-oriented single-host deployment;

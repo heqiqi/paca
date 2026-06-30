@@ -1,6 +1,6 @@
 # Repository Structure
 
-Paca is a monorepo with clearly separated runtime surfaces, tooling, and documentation.
+Litchi is a monorepo with clearly separated runtime surfaces, tooling, and documentation.
 
 ```text
 paca/
